@@ -1,5 +1,5 @@
-#include "BrauchbareMethoden.h"
-#include "GetSensor.h"
+#include "assets/classes/UsefullMethods.h"
+#include "assets/classes/Sensors.h"
 
 class Main
 {
@@ -22,8 +22,9 @@ class Main
     unsigned long previousMillis = 0;
     const long standardInterval = 1000;
 
-    usefullMethods um;
-
+    /**** Objekte ****/
+    UsefullMethods um;
+    Sensors s;
     void setup()
     {
         pinMode(ledPin, OUTPUT);
@@ -34,11 +35,16 @@ class Main
 
     void loop()
     {
-        //if(delayWithoutDelay(previousMillis,standardInterval)){
-        //    ledState ? ledState = false : ledState = true;
-        //}
+        if(um.delayWithoutDelay(previousMillis,standardInterval)){
+            ledState ? ledState = false : ledState = true;
+        }
 
         // Ausführung
-        um.testung();
+        action();
+    }
+        
+    void action()
+    {
+        digitalWrite(ledPin,ledState);
     }
 };
