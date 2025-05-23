@@ -53,7 +53,7 @@ void loop()
 
 
     // Ausführung
-    if(um.delayWithoutDelay(previousMillis,500)){um.send("guten tag");}
+    if(um.delayWithoutDelay(previousMillis,5000)){um.send("guten tag",client);}
     // action();
 }
     
