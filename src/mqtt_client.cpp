@@ -28,7 +28,7 @@ void setupMQTT() {
     client.setCallback(callback);
 
     if (WiFi.status() == WL_CONNECTED) {
-        if (client.connect("ESP_Auth")) {
+        if (client.connect(ESP_NAME)) {
             mqttEnabled = true;
             for (const auto& entry : topicHandlers) {
                 client.subscribe(entry.first.c_str());
@@ -51,7 +51,7 @@ void mqttLoop() {
             unsigned long now = millis();
             if (now - lastReconnectAttempt > 15000) { // alle 10 Sekunden versuchen
                 Serial.println("MQTT neu verbinden...");
-                if (client.connect("ESP_Auth")) {
+                if (client.connect(ESP_NAME)) {
                     Serial.println("🟢 MQTT verbunden.");
                     for (const auto& entry : topicHandlers) {
                         client.subscribe(entry.first.c_str());
@@ -90,7 +90,7 @@ void reconnectMQTT() {
         Serial.println("🔁 MQTT Verbindung getrennt – neu verbinden...");
 
         while (!client.connected()) {
-            if (client.connect("ESP_Auth")) {
+            if (client.connect(ESP_NAME)) {
                 Serial.println("✅ MQTT verbunden.");
                 // Alle Abos neu registrieren:
                 for (const auto& entry : topicHandlers) {

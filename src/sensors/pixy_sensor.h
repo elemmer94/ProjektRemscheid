@@ -1,7 +1,6 @@
 #pragma once
 #include "sensor_interface.h"
 #include <Pixy2.h>
-#include <Pixy2SPI_SS.h>
 
 class PixySensor : public SensorInterface {
 public:
