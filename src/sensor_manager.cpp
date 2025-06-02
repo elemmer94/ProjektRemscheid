@@ -6,16 +6,21 @@
 
 std::vector<SensorInterface*> sensors;
 
-
 void SensorManager::begin() {
-    sensors.push_back(new RFIDSensor(RFID_SS, RFID_RST, "rfid/uid", "rfid/access"));  // D2 = SS, D1 = RST
-    sensors.push_back(new PixySensor(PIXY_SS, "pixy/barcode", "pixy/access"));  // D8 = SS
+    // Anlegen der Sensorobjekte
+    sensors.push_back(new RFIDSensor(RFID_SS, RFID_RST, RFID_SEND, RFID_RECEIVE));
+    sensors.push_back(new PixySensor(PIXY_SS, PIXY_SEND, PIXY_RECEIVE));
+    // ggf. weitere Sensoren
+    
+
+    // Initialisierung der Sensoren
     for (auto* s : sensors) {
         s->begin();
     }
 }
 
 void SensorManager::loop() {
+    // Abfrage der Sensoren
     for (auto* s : sensors) {
         s->loop();
     }

@@ -19,18 +19,18 @@ void setupWiFi() {
     }
 
     if (WiFi.status() == WL_CONNECTED) {
-        Serial.print("\n🟢 WiFi connected.\nIP address: ");
+        Serial.print("\n🟢 WLAN verbunden.\nIP Adresse: ");
         Serial.println(WiFi.localIP());
-        Serial.print("MAC address: ");
+        Serial.print("MAC Adresse: ");
         Serial.println(WiFi.macAddress());
     } else {
-        Serial.println("\n❌ WiFi connection failed. Continuing in offline mode.");
+        Serial.println("\n❌ WLAN Verbindung fehlgeschlagen. Offline Modus.");
     }
 }
 
 void reconnectWiFi() {
     if (WiFi.status() != WL_CONNECTED) {
-        Serial.println("🔁 WiFi disconnected – reconnect...");
+        Serial.println("🔁 WLAN Verbindung getrennt – neu verbinden...");
         WiFi.disconnect();
         WiFi.begin(ssid, password);
         int attempts = 0;
@@ -41,9 +41,9 @@ void reconnectWiFi() {
         }
         Serial.println();
         if (WiFi.status() == WL_CONNECTED) {
-            Serial.println("🟢 WiFi connected.");
+            Serial.println("🟢 WLAN verbunden.");
         } else {
-            Serial.println("❌ WiFi reconnect failed.");
+            Serial.println("❌ WLAN Verbindung fehlgeschlagen.");
         }
     }
 }

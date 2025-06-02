@@ -28,17 +28,18 @@ void setupMQTT() {
     client.setCallback(callback);
 
     if (WiFi.status() == WL_CONNECTED) {
-        if (client.connect("ESP8266Client")) {
+        if (client.connect("ESP_Auth")) {
             mqttEnabled = true;
             for (const auto& entry : topicHandlers) {
                 client.subscribe(entry.first.c_str());
             }
-            Serial.println("🟢 MQTT connected.");
+            Serial.println("🟢 MQTT verbunden.");
         } else {
-            Serial.println("❌ MQTT connection failed.");
+            Serial.println("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
+            Serial.println(client.state());
         }
     } else {
-        Serial.println("❌ Skipping MQTT setup: WiFi not connected.");
+        Serial.println("❌ MQTT überspringen: WLAN ist nicht verbunden.");
     }
 }
 
@@ -49,14 +50,15 @@ void mqttLoop() {
         if (!client.connected()) {
             unsigned long now = millis();
             if (now - lastReconnectAttempt > 15000) { // alle 10 Sekunden versuchen
-                Serial.println("MQTT reconnect...");
-                if (client.connect("ESP8266Client")) {
-                    Serial.println("🟢 MQTT reconnected.");
+                Serial.println("MQTT neu verbinden...");
+                if (client.connect("ESP_Auth")) {
+                    Serial.println("🟢 MQTT verbunden.");
                     for (const auto& entry : topicHandlers) {
                         client.subscribe(entry.first.c_str());
                     }
                 } else {
-                    Serial.println("❌ MQTT reconnect failed.");
+                    Serial.print("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
+                    Serial.println(client.state());
                 }
                 lastReconnectAttempt = now;
             }
@@ -69,12 +71,13 @@ void mqttLoop() {
 void publishMessage(const char* topic, const char* message) {
     if (mqttEnabled) {
         client.publish(topic, message);
+        Serial.print("[Online] ");
     } else {
         Serial.print("[Offline] ");
-        Serial.print(topic);
-        Serial.print(": ");
-        Serial.println(message);
     }
+    Serial.print(topic);
+    Serial.print(": ");
+    Serial.println(message);
 }
 
 void subscribeToTopic(const char* topic, std::function<void(const String&)> handler) {
@@ -84,11 +87,11 @@ void subscribeToTopic(const char* topic, std::function<void(const String&)> hand
 
 void reconnectMQTT() {
     if (!client.connected()) {
-        Serial.println("🔁 MQTT disconnected – reconnect...");
+        Serial.println("🔁 MQTT Verbindung getrennt – neu verbinden...");
 
         while (!client.connected()) {
-            if (client.connect("ESP8266Client")) {
-                Serial.println("✅ MQTT reconnected.");
+            if (client.connect("ESP_Auth")) {
+                Serial.println("✅ MQTT verbunden.");
                 // Alle Abos neu registrieren:
                 for (const auto& entry : topicHandlers) {
                     client.subscribe(entry.first.c_str());
@@ -96,7 +99,7 @@ void reconnectMQTT() {
                     Serial.println(entry.first);
                 }
             } else {
-                Serial.print("❌ MQTT Error: ");
+                Serial.print("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
                 Serial.println(client.state());
                 delay(5000);  // Warte vor erneutem Versuch
             }
