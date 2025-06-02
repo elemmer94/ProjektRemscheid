@@ -49,7 +49,7 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 #define TEMP2_SEND "temp2/value"
 #define GAS_SEND "gas/value"
 // ESP 4
-#define TEMP_SEND "temp3/value"
+#define TEMP3_SEND "temp3/value"
 #define HUMIDITY_SEND "humidity/value"
 #define VAPOR_SEND "vapor/value"
 
