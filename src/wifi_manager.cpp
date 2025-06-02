@@ -1,5 +1,5 @@
 #include "wifi_manager.h"
-#include "secrets.h"
+#include "parameter.h"
 
 
 void setupWiFi() {
@@ -19,7 +19,7 @@ void setupWiFi() {
     }
 
     if (WiFi.status() == WL_CONNECTED) {
-        Serial.print("\n✅ WiFi connected.\nIP address: ");
+        Serial.print("\n🟢 WiFi connected.\nIP address: ");
         Serial.println(WiFi.localIP());
         Serial.print("MAC address: ");
         Serial.println(WiFi.macAddress());
@@ -41,7 +41,7 @@ void reconnectWiFi() {
         }
         Serial.println();
         if (WiFi.status() == WL_CONNECTED) {
-            Serial.println("✅ WiFi connected.");
+            Serial.println("🟢 WiFi connected.");
         } else {
             Serial.println("❌ WiFi reconnect failed.");
         }

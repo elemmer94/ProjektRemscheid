@@ -13,7 +13,7 @@ void RFIDSensor::begin() {
     subscribeToTopic(_responseTopic, [this](const String& message) {
         handleAccessResponse(message);
     });
-    Serial.println("🟢 RFID Sensor bereit");
+    Serial.println("🟢 RFID ready.");
 }
 
 void RFIDSensor::loop() {

@@ -2,6 +2,7 @@
 #include "mqtt_client.h"
 #include <PubSubClient.h>
 #include <ESP8266WiFi.h>
+#include <parameter.h>
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -9,7 +10,7 @@ std::map<String, std::function<void(const String&)>> topicHandlers;
 
 bool mqttEnabled = false;   // Ausgabe auf dem Seriellen Monitor
 
-const char* mqtt_server = "192.168.0.100";  // z. B. IP des RPi
+//const char* MQTT_SERVER = "192.168.0.100";  // z. B. IP des RPi ist in parameter.h definiert
 
 void callback(char* topic, byte* payload, unsigned int length) {
     String message;
@@ -23,7 +24,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 }
 
 void setupMQTT() {
-    client.setServer(mqtt_server, 1883);
+    client.setServer(MQTT_SERVER, 1883);
     client.setCallback(callback);
 
     if (WiFi.status() == WL_CONNECTED) {

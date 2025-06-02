@@ -15,9 +15,9 @@ void PixySensor::begin() {
 
   // In den Line-Modus wechseln
   if (pixy.changeProg("line") == 0) {
-    Serial.println("🟢 Pixy2 bereit.");
+    Serial.println("🟢 Pixy2 ready.");
   } else {
-    Serial.println("❌ Fehler beider Initialisierung.");
+    Serial.println("❌ Fehler bei der Initialisierung.");
   }
     
 }
