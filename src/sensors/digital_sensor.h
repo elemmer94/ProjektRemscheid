@@ -1,4 +1,5 @@
 #pragma once
+#include <Arduino.h>
 #include "sensor_interface.h"
 
 class DigitalSensor : public SensorInterface
