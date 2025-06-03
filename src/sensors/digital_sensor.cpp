@@ -9,10 +9,13 @@ DigitalSensor::DigitalSensor(uint8_t inPin, const char *publishTopic)
 void DigitalSensor::begin()
 {
     pinMode(_inPin, INPUT);
+    Serial.println("🟢 Digitaler Sensor bereit.");
 }
 
 void DigitalSensor::loop()
 {
     sensorState = digitalRead(_inPin);
     publishMessage(_publishTopic, String(sensorState).c_str());
+
+    delay(1000);
 }

@@ -10,10 +10,10 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 #define MQTT_SERVER "192.168.0.100"
 
 // ESP Name
-#define ESP_NAME "ESP1"
-// #define ESP_NAME "ESP2"
-// #define ESP_NAME "ESP3"
-// #define ESP_NAME "ESP4"
+#define ESP_NAME "ESP_1"
+// #define ESP_NAME "ESP_2"
+// #define ESP_NAME "ESP_3"
+// #define ESP_NAME "ESP_4"
 
 // PINs der Sensoren am ESP
 // ESP 1

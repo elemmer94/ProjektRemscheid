@@ -12,6 +12,7 @@ AnalogSensor::AnalogSensor(uint8_t inPin, const char *publishTopic)
 void AnalogSensor::begin()
 {
     pinMode(_inPin, INPUT);
+    Serial.println("🟢 Analoger Sensor bereit.");
 }
 
 void AnalogSensor::loop()
@@ -22,4 +23,6 @@ void AnalogSensor::loop()
     unit = "%";
 
     publishMessage(_publishTopic, (sensorValue + unit).c_str());
+
+    delay(1000);
 }
