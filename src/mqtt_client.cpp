@@ -70,6 +70,8 @@ void subscribeToTopic(const char *topic, std::function<void(const String &)> han
 
 void reconnectMQTT()
 {
+    myTimer = 0;
+    
     while (!client.connected() && timePassed(myTimer, INTERVALL))
     {
         if (client.connect(ESP_NAME))

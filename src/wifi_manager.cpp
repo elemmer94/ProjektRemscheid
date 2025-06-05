@@ -33,6 +33,8 @@ void setupWiFi()
 
 void reconnectWiFi()
 {
+    myTimer = 0;
+    
     if (WiFi.status() != WL_CONNECTED)
     {
         WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
