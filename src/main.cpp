@@ -20,7 +20,7 @@ void setup()
 
 void loop()
 {
-    if (timePassed(myTimer, INTERVALL))
+    if (timePassed(myTimer, 1000))
     {
         reconnectWiFi();
         reconnectMQTT();

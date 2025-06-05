@@ -10,7 +10,7 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 #define MQTT_SERVER "192.168.0.100"
 
 // Timer
-#define INTERVALL 1000
+#define INTERVALL 10000
 
 // ESP Name
 #define ESP_NAME "ESP_1"
