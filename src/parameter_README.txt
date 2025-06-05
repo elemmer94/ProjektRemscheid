@@ -6,8 +6,10 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 #define WIFI_SSID "SSID"
 #define WIFI_PASSWORD "PASSWORT"
 
-// IP des RASPIs
-#define MQTT_SERVER "192.168.0.100"
+// IPs und MAC
+#define RASPI_IP "192.168.0.100"
+#define ESP_IP "esp/ip"
+#define ESP_MAC "esp/mac"
 
 // Timer
 #define INTERVALL 10000

@@ -1,4 +1,5 @@
 #include "wifi_manager.h"
+#include "mqtt_client.h"
 #include "parameter.h"
 #include "timer.h"
 
@@ -13,17 +14,15 @@ void setupWiFi()
     WiFi.setAutoReconnect(true);
     WiFi.persistent(true);
 
-    while (WiFi.status() != WL_CONNECTED && timePassed(myTimer, INTERVALL))
+    while (WiFi.status() != WL_CONNECTED)
     {
         Serial.print(".");
+        delay(500);
     }
 
     if (WiFi.status() == WL_CONNECTED)
     {
-        Serial.print("\n🟢 WLAN verbunden.\nIP Adresse: ");
-        Serial.println(WiFi.localIP());
-        Serial.print("MAC Adresse: ");
-        Serial.println(WiFi.macAddress());
+        publishMessage(ESP_IP, WiFi.localIP().toString().c_str());
     }
     else
     {
@@ -34,19 +33,20 @@ void setupWiFi()
 void reconnectWiFi()
 {
     myTimer = 0;
-    
+
     if (WiFi.status() != WL_CONNECTED)
     {
         WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
         while (WiFi.status() != WL_CONNECTED && timePassed(myTimer, INTERVALL))
         {
+            delay(500);
             Serial.print(".");
         }
 
         if (WiFi.status() == WL_CONNECTED)
         {
-            Serial.println("\n🟢 WLAN verbunden.");
+            publishMessage(ESP_IP, WiFi.localIP().toString().c_str());
         }
         else
         {

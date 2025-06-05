@@ -27,7 +27,7 @@ void callback(char *topic, byte *payload, unsigned int length)
 
 void setupMQTT()
 {
-    client.setServer(MQTT_SERVER, 1883);
+    client.setServer(RASPI_IP, 1883);
     client.setCallback(callback);
 
     if (WiFi.status() == WL_CONNECTED)
@@ -54,7 +54,6 @@ void setupMQTT()
 
 void publishMessage(const char *topic, const char *message)
 {
-
     client.publish(topic, message);
 
     Serial.print(topic);
@@ -71,7 +70,7 @@ void subscribeToTopic(const char *topic, std::function<void(const String &)> han
 void reconnectMQTT()
 {
     myTimer = 0;
-    
+
     while (!client.connected() && timePassed(myTimer, INTERVALL))
     {
         if (client.connect(ESP_NAME))
@@ -87,6 +86,7 @@ void reconnectMQTT()
             Serial.print("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
             Serial.println(client.state());
         }
+        delay(500);
     }
     if (client.connected())
     {

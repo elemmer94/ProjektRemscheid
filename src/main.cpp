@@ -12,7 +12,6 @@ SensorManager sensorManager;
 void setup()
 {
     Serial.begin(115200);
-    // Initialisierung von WLAN, MQTT und Sensoren
     setupWiFi();
     setupMQTT();
     sensorManager.begin();
@@ -20,7 +19,7 @@ void setup()
 
 void loop()
 {
-    if (timePassed(myTimer, 1000))
+    if (timePassed(myTimer, 2000))
     {
         reconnectWiFi();
         reconnectMQTT();
