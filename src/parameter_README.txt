@@ -46,7 +46,7 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 // MQTT-Topics
 // ESP 1
 #define INFRARED_SEND "infrared/value"
-#define RFID_SEND "rfid/uid"
+#define RFID_SEND "rc522/rfid"
 #define PIXY_SEND "pixy/barcode"
 #define ULTRA_SEND "ultra/value"
 #define VOLTAGE_SEND "voltage/value"

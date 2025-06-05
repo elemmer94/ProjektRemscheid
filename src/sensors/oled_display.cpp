@@ -19,7 +19,6 @@ void OLedDisplay::loop()
 {
     u8g2->clearBuffer();
     u8g2->sendBuffer();
-    delay(1000);
 }
 
 void OLedDisplay::handleAccessResponse(const String &message)
@@ -39,4 +38,6 @@ void OLedDisplay::handleAccessResponse(const String &message)
         u8g2->drawStr(18, 54, "verboten!");
     }
     u8g2->sendBuffer();
+
+    delay(3000);
 }

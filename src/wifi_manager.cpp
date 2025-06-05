@@ -19,14 +19,16 @@ void setupWiFi()
         Serial.print(".");
         delay(500);
     }
+    Serial.println();
 
     if (WiFi.status() == WL_CONNECTED)
     {
         publishMessage(ESP_IP, WiFi.localIP().toString().c_str());
+        publishMessage(ESP_MAC, WiFi.macAddress().c_str());
     }
     else
     {
-        Serial.println("\n❌ WLAN Verbindung fehlgeschlagen.");
+        Serial.println("❌ WLAN Verbindung fehlgeschlagen.");
     }
 }
 
