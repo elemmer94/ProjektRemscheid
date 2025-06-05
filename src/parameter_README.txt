@@ -22,6 +22,8 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 #define PIXY_SS D8
 #define INFRARED_PIN D0
 #define VOLTAGE A0
+#define DISPLAY_SDA D4
+#define DISPLAY_SCK D3
 // ESP 2
 #define PIR_PIN D0
 #define TEMP1_PIN A0
@@ -41,6 +43,7 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 #define PIXY_RECEIVE "pixy/access"
 #define INFRARED_SEND "infrared/value"
 #define VOLTAGE_SEND "voltage/value"
+#define DISPLAY_RECEIVE "display/text"
 // ESP 2
 #define PIR_SEND "pir/value"
 #define TEMP1_SEND "temp1/value"

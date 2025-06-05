@@ -2,8 +2,8 @@
 #include <SPI.h>
 #include "mqtt_client.h"
 
-PixySensor::PixySensor(uint8_t ssPin, const char *publishTopic, const char *responseTopic)
-    : _ssPin(ssPin), _publishTopic(publishTopic), _responseTopic(responseTopic) {}
+PixySensor::PixySensor(uint8_t ssPin, const char *publishTopic)
+    : _ssPin(ssPin), _publishTopic(publishTopic) {}
 
 void PixySensor::begin()
 {
@@ -36,18 +36,4 @@ void PixySensor::loop()
   }
 
   digitalWrite(_ssPin, HIGH); // Deaktivieren
-}
-
-void PixySensor::handleAccessResponse(const String &message)
-{
-  if (message == "granted")
-  {
-    Serial.println("Zugang gewährt");
-    // z. B. LED an
-  }
-  else
-  {
-    Serial.println("Zugang abgelehnt");
-    // z. B. Alarm o.Ä.
-  }
 }

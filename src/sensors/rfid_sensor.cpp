@@ -3,16 +3,14 @@
 #include <SPI.h>
 #include "mqtt_client.h"
 
-RFIDSensor::RFIDSensor(uint8_t ssPin, uint8_t rstPin, const char *publishTopic, const char *responseTopic)
-    : _ssPin(ssPin), _rstPin(rstPin), _publishTopic(publishTopic), _responseTopic(responseTopic), rfid(nullptr) {}
+RFIDSensor::RFIDSensor(uint8_t ssPin, uint8_t rstPin, const char *publishTopic)
+    : _ssPin(ssPin), _rstPin(rstPin), _publishTopic(publishTopic), rfid(nullptr) {}
 
 void RFIDSensor::begin()
 {
     SPI.begin();
     rfid = new MFRC522(_ssPin, _rstPin);
     rfid->PCD_Init();
-    subscribeToTopic(_responseTopic, [this](const String &message)
-                     { handleAccessResponse(message); });
     Serial.println("🟢 RFID bereit.");
 }
 
@@ -33,18 +31,4 @@ void RFIDSensor::loop()
     rfid->PICC_HaltA();
     rfid->PCD_StopCrypto1();
     delay(500);
-}
-
-void RFIDSensor::handleAccessResponse(const String &message)
-{
-    if (message == "granted")
-    {
-        Serial.println("Zugang gewährt");
-        // z. B. LED an
-    }
-    else
-    {
-        Serial.println("Zugang abgelehnt");
-        // z. B. Alarm o.Ä.
-    }
 }

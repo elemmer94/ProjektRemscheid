@@ -8,14 +8,14 @@ SensorManager sensorManager;
 void setup() {
     Serial.begin(115200);
     // Initialisierung von WLAN, MQTT und Sensoren
-    setupWiFi();
-    setupMQTT();
+    //setupWiFi();
+    //setupMQTT();
     sensorManager.begin();
 }
 
 void loop() {
     // Aktualisierung der MQTT-Nachrichten und der Sensorwerte
     sensorManager.loop();
-    mqttLoop();
+    //mqttLoop();
     delay(10);
 }

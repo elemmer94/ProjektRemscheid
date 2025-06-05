@@ -12,5 +12,4 @@ public:
 private:
     uint8_t _inPin;
     const char *_publishTopic;
-    const char *_responseTopic;
 };

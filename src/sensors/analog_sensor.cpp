@@ -24,5 +24,5 @@ void AnalogSensor::loop()
 
     publishMessage(_publishTopic, (sensorValue + unit).c_str());
 
-    delay(1000);
+    delay(5000);
 }
