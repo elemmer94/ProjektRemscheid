@@ -30,5 +30,4 @@ void RFIDSensor::loop()
     publishMessage(_publishTopic, uid.c_str());
     rfid->PICC_HaltA();
     rfid->PCD_StopCrypto1();
-    delay(500);
 }

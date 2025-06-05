@@ -1,5 +1,8 @@
 #include "wifi_manager.h"
 #include "parameter.h"
+#include "timer.h"
+
+extern unsigned long myTimer;
 
 void setupWiFi()
 {
@@ -10,40 +13,42 @@ void setupWiFi()
     WiFi.setAutoReconnect(true);
     WiFi.persistent(true);
 
-    while (WiFi.status() != WL_CONNECTED)
+    while (WiFi.status() != WL_CONNECTED && timePassed(myTimer, INTERVALL))
     {
-        delay(500);
         Serial.print(".");
     }
 
-    Serial.print("\n🟢 WLAN verbunden.\nIP Adresse: ");
-    Serial.println(WiFi.localIP());
-    Serial.print("MAC Adresse: ");
-    Serial.println(WiFi.macAddress());
+    if (WiFi.status() == WL_CONNECTED)
+    {
+        Serial.print("\n🟢 WLAN verbunden.\nIP Adresse: ");
+        Serial.println(WiFi.localIP());
+        Serial.print("MAC Adresse: ");
+        Serial.println(WiFi.macAddress());
+    }
+    else
+    {
+        Serial.println("\n❌ WLAN Verbindung fehlgeschlagen.");
+    }
 }
 
 void reconnectWiFi()
 {
     if (WiFi.status() != WL_CONNECTED)
     {
-        Serial.println("🔁 WLAN Verbindung getrennt – neu verbinden...");
-        WiFi.disconnect();
-        WiFi.begin(ssid, password);
-        int attempts = 0;
-        while (WiFi.status() != WL_CONNECTED && attempts < 10)
+        WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+        while (WiFi.status() != WL_CONNECTED && timePassed(myTimer, INTERVALL))
         {
-            delay(500);
             Serial.print(".");
-            attempts++;
         }
-        Serial.println();
+
         if (WiFi.status() == WL_CONNECTED)
         {
-            Serial.println("🟢 WLAN verbunden.");
+            Serial.println("\n🟢 WLAN verbunden.");
         }
         else
         {
-            Serial.println("❌ WLAN Verbindung fehlgeschlagen.");
+            Serial.println("\n❌ WLAN Verbindung fehlgeschlagen.");
         }
     }
 }

@@ -5,6 +5,7 @@
 #include "sensors/digital_sensor.h"
 #include "sensors/analog_sensor.h"
 #include "sensors/oled_display.h"
+#include "sensors/voltage.h"
 
 std::vector<SensorInterface *> sensors;
 
@@ -13,12 +14,12 @@ void SensorManager::begin()
     // Erstelle Sensoren abhängig vom ESP
     if (strcmp(ESP_NAME, "ESP_1") == 0)
     {
-        // Anlegen der Sensorobjekte
         sensors.push_back(new RFIDSensor(RFID_SS, RFID_RST, RFID_SEND));
         sensors.push_back(new PixySensor(PIXY_SS, PIXY_SEND));
         sensors.push_back(new DigitalSensor(INFRARED_PIN, INFRARED_SEND));
-        sensors.push_back(new OLedDisplay(DISPLAY_SCK, DISPLAY_SDA, DISPLAY_RECEIVE));
         // Ultraschallsensor hinzufügen
+        sensors.push_back(new Voltage(VOLTAGE, VOLTAGE_SEND));
+        sensors.push_back(new OLedDisplay(DISPLAY_SCK, DISPLAY_SDA, DISPLAY_RECEIVE));
     }
     else if (strcmp(ESP_NAME, "ESP_2") == 0)
     {
@@ -33,8 +34,7 @@ void SensorManager::begin()
     }
     else
     {
-        sensors.push_back(new DigitalSensor(TEMP_HUMIDITY_PIN, TEMP3_SEND));
-        // Luftfeuchtigkeitssensor hinzufügen
+        // DHT11 hinzufügen
         sensors.push_back(new AnalogSensor(VAPOR_PIN, VAPOR_SEND));
     }
 

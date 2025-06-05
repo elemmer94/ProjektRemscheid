@@ -16,6 +16,4 @@ void DigitalSensor::loop()
 {
     sensorState = digitalRead(_inPin);
     publishMessage(_publishTopic, String(sensorState).c_str());
-
-    delay(5000);
 }

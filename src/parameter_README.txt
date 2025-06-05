@@ -9,6 +9,9 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 // IP des RASPIs
 #define MQTT_SERVER "192.168.0.100"
 
+// Timer
+#define INTERVALL 1000
+
 // ESP Name
 #define ESP_NAME "ESP_1"
 // #define ESP_NAME "ESP_2"
@@ -17,13 +20,16 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 
 // PINs der Sensoren am ESP
 // ESP 1
-#define RFID_SS D2
-#define RFID_RST D1
-#define PIXY_SS D8
 #define INFRARED_PIN D0
-#define VOLTAGE A0
-#define DISPLAY_SDA D4
+#define RFID_RST D1
+#define RFID_SS D2
 #define DISPLAY_SCK D3
+#define DISPLAY_SDA D4
+#define PIXY_SS D8
+#define ULTRA_TRIG 1 // TX -> heißt keine Serial verwenden
+#define ULTRA_ECHO 3 // RX -> heißt keine Serial verwenden
+#define VOLTAGE A0
+
 // ESP 2
 #define PIR_PIN D0
 #define TEMP1_PIN A0
@@ -37,13 +43,12 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 
 // MQTT-Topics
 // ESP 1
-#define RFID_SEND "rfid/uid"
-#define RFID_RECEIVE "rfid/access"
-#define PIXY_SEND "pixy/barcode"
-#define PIXY_RECEIVE "pixy/access"
 #define INFRARED_SEND "infrared/value"
+#define RFID_SEND "rfid/uid"
+#define PIXY_SEND "pixy/barcode"
+#define ULTRA_SEND "ultra/value"
 #define VOLTAGE_SEND "voltage/value"
-#define DISPLAY_RECEIVE "display/text"
+#define DISPLAY_RECEIVE "display/access"
 // ESP 2
 #define PIR_SEND "pir/value"
 #define TEMP1_SEND "temp1/value"

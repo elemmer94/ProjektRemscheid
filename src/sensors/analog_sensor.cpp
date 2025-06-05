@@ -1,11 +1,6 @@
 #include "analog_sensor.h"
 #include "mqtt_client.h"
 
-double sensorValue = false;
-double fenya;
-double r;
-String unit;
-
 AnalogSensor::AnalogSensor(uint8_t inPin, const char *publishTopic)
     : _inPin(inPin), _publishTopic(publishTopic) {}
 
@@ -17,12 +12,8 @@ void AnalogSensor::begin()
 
 void AnalogSensor::loop()
 {
-    sensorValue = analogRead(_inPin);
-
+    double sensorValue = analogRead(_inPin);
     sensorValue = (sensorValue * 100) / 1024;
-    unit = "%";
 
-    publishMessage(_publishTopic, (sensorValue + unit).c_str());
-
-    delay(5000);
+    publishMessage(_publishTopic, String(sensorValue).c_str());
 }

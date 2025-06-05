@@ -2,7 +2,10 @@
 #include "mqtt_client.h"
 #include <PubSubClient.h>
 #include <ESP8266WiFi.h>
-#include <parameter.h>
+#include "parameter.h"
+#include "timer.h"
+
+extern unsigned long myTimer;
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -49,38 +52,6 @@ void setupMQTT()
     }
 }
 
-void mqttLoop()
-{
-    static unsigned long lastReconnectAttempt = 0;
-
-    if (!client.connected())
-    {
-        unsigned long now = millis();
-        if (now - lastReconnectAttempt > 10000)
-        { // alle 10 Sekunden versuchen
-            Serial.println("MQTT neu verbinden...");
-            if (client.connect(ESP_NAME))
-            {
-                Serial.println("🟢 MQTT verbunden.");
-                for (const auto &entry : topicHandlers)
-                {
-                    client.subscribe(entry.first.c_str());
-                }
-            }
-            else
-            {
-                Serial.print("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
-                Serial.println(client.state());
-            }
-            lastReconnectAttempt = now;
-        }
-    }
-    else
-    {
-        client.loop(); // nur, wenn verbunden
-    }
-}
-
 void publishMessage(const char *topic, const char *message)
 {
 
@@ -99,29 +70,24 @@ void subscribeToTopic(const char *topic, std::function<void(const String &)> han
 
 void reconnectMQTT()
 {
-    if (!client.connected())
+    while (!client.connected() && timePassed(myTimer, INTERVALL))
     {
-        Serial.println("🔁 MQTT Verbindung getrennt – neu verbinden...");
-
-        while (!client.connected())
+        if (client.connect(ESP_NAME))
         {
-            if (client.connect(ESP_NAME))
+            Serial.println("✅ MQTT verbunden.");
+            for (const auto &entry : topicHandlers)
             {
-                Serial.println("✅ MQTT verbunden.");
-                // Alle Abos neu registrieren:
-                for (const auto &entry : topicHandlers)
-                {
-                    client.subscribe(entry.first.c_str());
-                    Serial.print("🔔 Wiederabonniert: ");
-                    Serial.println(entry.first);
-                }
-            }
-            else
-            {
-                Serial.print("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
-                Serial.println(client.state());
-                delay(5000); // Warte vor erneutem Versuch
+                client.subscribe(entry.first.c_str());
             }
         }
+        else
+        {
+            Serial.print("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
+            Serial.println(client.state());
+        }
+    }
+    if (client.connected())
+    {
+        client.loop();
     }
 }
