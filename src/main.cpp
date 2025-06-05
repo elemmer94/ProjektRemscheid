@@ -5,7 +5,7 @@
 #include "timer.h"
 #include "parameter.h"
 
-unsigned long myTimer = 0;
+extern unsigned long myTimer;
 
 SensorManager sensorManager;
 
