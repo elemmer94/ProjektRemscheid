@@ -18,7 +18,7 @@ void SensorManager::begin()
         sensors.push_back(new RFIDSensor(RFID_SS, RFID_RST, RFID_SEND));
         sensors.push_back(new PixySensor(PIXY_SS, PIXY_SEND));
         sensors.push_back(new DigitalSensor(INFRARED_PIN, INFRARED_SEND));
-        sensors.push_back(new Ultrasonic(ULTRA_ECHO,ULTRA_TRIG,ULTRA_SEND));
+        // sensors.push_back(new Ultrasonic(ULTRA_ECHO,ULTRA_TRIG,ULTRA_SEND));
         sensors.push_back(new Voltage(VOLTAGE, VOLTAGE_SEND));
         sensors.push_back(new OLedDisplay(DISPLAY_SCK, DISPLAY_SDA, DISPLAY_RECEIVE));
     }

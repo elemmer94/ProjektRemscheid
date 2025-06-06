@@ -9,14 +9,14 @@ SensorManager sensorManager;
 void setup()
 {
     Serial.begin(115200);
-    // setupWiFi();
+    setupWiFi();
     setupMQTT();
     sensorManager.begin();
 }
 
 void loop()
 {
-    // reconnectWiFi();
+    reconnectWiFi();
     reconnectMQTT();
     sensorManager.loop();
     delay(1000);

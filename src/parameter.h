@@ -1,11 +1,11 @@
 // Definitionen der variablen Parameter
 
 // WiFi-Anmeldung
-#define WIFI_SSID "SSID"
-#define WIFI_PASSWORD "PASSWORT"
+#define WIFI_SSID "Lemmer"
+#define WIFI_PASSWORD "80366569843992685706"
 
 // IPs und MAC
-#define RASPI_IP "192.168.0.100"
+#define RASPI_IP "192.168.0.103"
 #define ESP_IP "esp/ip"
 #define ESP_MAC "esp/mac"
 
