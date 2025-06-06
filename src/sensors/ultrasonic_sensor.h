@@ -5,11 +5,12 @@
 class Ultrasonic : public SensorInterface
 {
 public:
-    Ultrasonic(uint8_t inPin, const char *publishTopic);
+    Ultrasonic(uint8_t _echoPin, uint8_t _trigPin, const char *publishTopic);
     void begin() override;
     void loop() override;
 
 private:
-    uint8_t _inPin;
+    uint8_t _echoPin;
+    uint8_t _trigPin;
     const char *_publishTopic;
 };
