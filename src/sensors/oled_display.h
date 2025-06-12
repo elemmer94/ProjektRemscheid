@@ -6,13 +6,14 @@
 class OLedDisplay : public SensorInterface
 {
 public:
-    OLedDisplay(uint8_t sckPin, uint8_t sdaPin, const char* responseTopic);
+    OLedDisplay(uint8_t sckPin, uint8_t sdaPin, uint8_t relaisPin, const char* responseTopic);
     void begin() override;
     void loop() override;
 
 private:
     uint8_t _sckPin;
     uint8_t _sdaPin;
+    uint8_t _relaisPin;
     const char* _responseTopic;
     U8G2 *u8g2 = nullptr;
 

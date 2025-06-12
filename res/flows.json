@@ -1,0 +1,1814 @@
+[
+    {
+        "id": "c938bfb2d64a222e",
+        "type": "tab",
+        "label": "ESP_EINGANG",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "7403d64f0edf50af",
+        "type": "tab",
+        "label": "ESP_LAGER1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "88257daac3ab0f44",
+        "type": "tab",
+        "label": "ESP_LAGER2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2da02b444bea3b70",
+        "type": "tab",
+        "label": "ESP_LAGER3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "caee75c53553d1b6",
+        "type": "subflow",
+        "name": "Mittelwert der Daten von einer Minute",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 40,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "8878c7762a2d578a"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 600,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "c573e5396d251d09",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "4a671343079fb07a",
+        "type": "group",
+        "z": "c938bfb2d64a222e",
+        "name": "Authentifizierung",
+        "style": {
+            "fill": "#e3f3d3",
+            "label": true
+        },
+        "nodes": [
+            "bbc8ec0acb1fbdae",
+            "9120b08bee319fc0",
+            "7f361e4ddadca45b",
+            "8f24ba6ac2eeb70e",
+            "ed19976d973a5026",
+            "2dfc05681b4fdd80",
+            "c67289501fc3e3cd",
+            "656836734b7d3a27",
+            "37e0697a6de031fc",
+            "414069dc23b6b128",
+            "522cea21c03cdc90",
+            "e639b0325e20de79",
+            "d61a7fd1515a4d64",
+            "4aac042950cfab13",
+            "294b9eda5cbab777"
+        ],
+        "x": 14,
+        "y": 299,
+        "w": 1292,
+        "h": 222
+    },
+    {
+        "id": "558c9f7eab2b08d8",
+        "type": "group",
+        "z": "c938bfb2d64a222e",
+        "name": "Sensordaten",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "cb22cc8198f2ce3c",
+            "6a029c9223ebcefa",
+            "96c071d6f31d007c",
+            "0232d84cbc888b6f",
+            "681ba5f0c5696751",
+            "2f84a625a717913c",
+            "8549bc54c8389b97",
+            "9e4d8434fabba56f",
+            "c5599bda4113ac85"
+        ],
+        "x": 14,
+        "y": 539,
+        "w": 852,
+        "h": 262
+    },
+    {
+        "id": "52646d9484b43ebf",
+        "type": "group",
+        "z": "c938bfb2d64a222e",
+        "name": "Last-Will-Message",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "5c270d62b3cebdb7",
+            "438073cffe36f051",
+            "36e95957420c7e9c"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 632,
+        "h": 82
+    },
+    {
+        "id": "d03dfc5fdbee8e9b",
+        "type": "group",
+        "z": "7403d64f0edf50af",
+        "name": "Sensordaten",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "0c475a45d493829e",
+            "9c4dc8e075dd53c2",
+            "ae6c2d2d9f080250",
+            "031fc8bac2c05212"
+        ],
+        "x": 14,
+        "y": 299,
+        "w": 572,
+        "h": 142
+    },
+    {
+        "id": "3ef490d22396d9c2",
+        "type": "group",
+        "z": "7403d64f0edf50af",
+        "name": "Last-Will-Message",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "cbdfe8a55785602f",
+            "f5f807f9b751d4e8",
+            "b9b54214953909e4"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 632,
+        "h": 82
+    },
+    {
+        "id": "ecbed6fa3fc560dc",
+        "type": "group",
+        "z": "88257daac3ab0f44",
+        "name": "Last-Will-Message",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "f20c7739b8fb1a56",
+            "57cf22c66a593e1f",
+            "fa548ba8b2fb9338"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 632,
+        "h": 82
+    },
+    {
+        "id": "e5585d08d810d2f5",
+        "type": "group",
+        "z": "2da02b444bea3b70",
+        "name": "Last-Will-Message",
+        "style": {
+            "fill": "#ffbfbf",
+            "label": true
+        },
+        "nodes": [
+            "696b2b350a5e9a40",
+            "663b474054f0b764",
+            "4ed96ea84cf03a8a"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 632,
+        "h": 82
+    },
+    {
+        "id": "3fbc6a3cb9bb4e80",
+        "type": "group",
+        "z": "7403d64f0edf50af",
+        "name": "ESP Daten",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "9c68d84392896c46",
+            "0d1e258a52cbb792",
+            "0271f3bc7c2438aa",
+            "825a7c31340147a4",
+            "ea1b39fbaec4d875",
+            "5ab543f8358d9e73",
+            "29ce9dbaf27fe2e1"
+        ],
+        "x": 14,
+        "y": 119,
+        "w": 872,
+        "h": 162
+    },
+    {
+        "id": "23fa941d3b6e675c",
+        "type": "group",
+        "z": "c938bfb2d64a222e",
+        "name": "ESP Daten",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "d91c092cf5e1f538",
+            "d94f0bc4709f7e50",
+            "08a1b2eeb539c57f",
+            "cae95b1d8e6a8960",
+            "4d91c4f3ebfafc4c",
+            "320c19d2cb2610d0",
+            "480f5318f2d63b48"
+        ],
+        "x": 14,
+        "y": 119,
+        "w": 872,
+        "h": 162
+    },
+    {
+        "id": "528eae0a7c13d853",
+        "type": "group",
+        "z": "c938bfb2d64a222e",
+        "name": "Daten löschen",
+        "style": {
+            "fill": "#ffefbf",
+            "label": true
+        },
+        "nodes": [
+            "a1b2c3d4e5f6",
+            "f6e5d4c3b2a1",
+            "bd396f67859143ed",
+            "f499713bfc3f4ab1"
+        ],
+        "x": 14,
+        "y": 819,
+        "w": 532,
+        "h": 142
+    },
+    {
+        "id": "sqlite_config",
+        "type": "sqlitedb",
+        "db": "/home/elemmer/sqlite/esp_monitor.db",
+        "mode": "READWRITE"
+    },
+    {
+        "id": "2809b599cc4c1905",
+        "type": "mqtt-broker",
+        "name": "RASPI",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "c9c90e5cccfde5ea",
+        "type": "ui_tab",
+        "name": "ESP 1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "acd381310640a3b8",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD.MM.YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "19672a31037e28ae",
+        "type": "ui_group",
+        "name": "Eingang",
+        "tab": "c9c90e5cccfde5ea",
+        "order": 1,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "28785c10990aeda9",
+        "type": "ui_tab",
+        "name": "ESP 2",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "41a9fbc91aec26f2",
+        "type": "ui_group",
+        "name": "Lager 1",
+        "tab": "28785c10990aeda9",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0ded6cebe130876e",
+        "type": "ui_tab",
+        "name": "ESP 3",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c19e42e73336857f",
+        "type": "ui_group",
+        "name": "Lager 2",
+        "tab": "0ded6cebe130876e",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4b0df29d288f6953",
+        "type": "ui_tab",
+        "name": "ESP 4",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "56f6f698198454b4",
+        "type": "ui_group",
+        "name": "Lager 3",
+        "tab": "4b0df29d288f6953",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "mqttbroker",
+        "type": "mqtt-broker",
+        "name": "local Mosquitto",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "8878c7762a2d578a",
+        "type": "function",
+        "z": "caee75c53553d1b6",
+        "name": "Speichere Werte",
+        "func": "let values = flow.get(\"values\") || [];\n\n// Stelle sicher, dass du eine echte Zahl speicherst\nlet val = parseFloat(msg.payload);\nif (!isNaN(val)) {\n    values.push(val);\n    flow.set(\"values\", values);\n} else {\n    node.warn(\"Ungültiger Wert erhalten: \" + msg.payload);\n}\n\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 40,
+        "wires": [
+            [
+                "c573e5396d251d09"
+            ]
+        ]
+    },
+    {
+        "id": "c573e5396d251d09",
+        "type": "function",
+        "z": "caee75c53553d1b6",
+        "name": "Berechne Mittelwert",
+        "func": "let values = flow.get(\"values\") || [];\n\nvalues.push(msg.payload);\n\nlet sum = values.reduce((a, b) => a + b, 0);\nlet avg = sum / values.length;\n\n// Speicher zurücksetzen\nflow.set(\"values\", []);\n\nmsg.payload = avg;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b30650d48a8d1351",
+        "type": "inject",
+        "z": "caee75c53553d1b6",
+        "name": "Trigger 60s",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "c573e5396d251d09"
+            ]
+        ]
+    },
+    {
+        "id": "cb22cc8198f2ce3c",
+        "type": "mqtt in",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "name": "VOLTAGE",
+        "topic": "eingang/voltage",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 700,
+        "wires": [
+            [
+                "6a029c9223ebcefa",
+                "96c071d6f31d007c"
+            ]
+        ]
+    },
+    {
+        "id": "36e95957420c7e9c",
+        "type": "mqtt in",
+        "z": "c938bfb2d64a222e",
+        "g": "52646d9484b43ebf",
+        "name": "LASTWILL_Eingang",
+        "topic": "esp/eingang/status",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "438073cffe36f051"
+            ]
+        ]
+    },
+    {
+        "id": "5c270d62b3cebdb7",
+        "type": "e-mail",
+        "z": "c938bfb2d64a222e",
+        "g": "52646d9484b43ebf",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "emil.lemmer94@gmail.com",
+        "dname": "LastWill-Mail",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "438073cffe36f051",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "52646d9484b43ebf",
+        "name": "Verbindungsverlust",
+        "func": "if(!msg.payload)\n{\n    msg.payload = \"Der ESP am Eingang ist außer Betrieb!\\nBitte kümmern Sie sich darum schnellstmöglich.\";\n    return msg;\n}\nelse\n{\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 60,
+        "wires": [
+            [
+                "5c270d62b3cebdb7"
+            ]
+        ]
+    },
+    {
+        "id": "6a029c9223ebcefa",
+        "type": "subflow:caee75c53553d1b6",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "name": "",
+        "x": 350,
+        "y": 700,
+        "wires": [
+            [
+                "0232d84cbc888b6f"
+            ]
+        ]
+    },
+    {
+        "id": "681ba5f0c5696751",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Write Database",
+        "x": 760,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0232d84cbc888b6f",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "name": "SQL INSERT",
+        "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (1, ${value});`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 700,
+        "wires": [
+            [
+                "681ba5f0c5696751"
+            ]
+        ]
+    },
+    {
+        "id": "96c071d6f31d007c",
+        "type": "ui_gauge",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "name": "Spannung",
+        "group": "19672a31037e28ae",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Spannung",
+        "label": "V",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "3.3",
+        "seg2": "3.6",
+        "diff": false,
+        "className": "",
+        "x": 270,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "bbc8ec0acb1fbdae",
+        "type": "mqtt in",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "RFID",
+        "topic": "eingang/rfid",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "7f361e4ddadca45b"
+            ]
+        ]
+    },
+    {
+        "id": "9120b08bee319fc0",
+        "type": "mqtt in",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "PIXY",
+        "topic": "eingang/pixy",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 420,
+        "wires": [
+            [
+                "ed19976d973a5026"
+            ]
+        ]
+    },
+    {
+        "id": "7f361e4ddadca45b",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "SQL SELECT",
+        "func": "let type = msg.topic.substring(msg.topic.indexOf('/') + 1);\nlet value = msg.payload;\n\nmsg.topic = `SELECT id, user_id FROM credential WHERE type = '${type}' AND value = '${value}';`;\nmsg.params = [type, value];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "8f24ba6ac2eeb70e"
+            ]
+        ]
+    },
+    {
+        "id": "8f24ba6ac2eeb70e",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SELECT",
+        "x": 400,
+        "y": 340,
+        "wires": [
+            [
+                "c67289501fc3e3cd"
+            ]
+        ]
+    },
+    {
+        "id": "ed19976d973a5026",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "SQL SELECT",
+        "func": "let type = msg.topic.substring(msg.topic.indexOf('/') + 1);\nlet value = msg.payload;\n\nmsg.topic = `SELECT id, user_id FROM credential WHERE type = '${type}' AND value = '${value}';`;\nmsg.params = [type, value];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 420,
+        "wires": [
+            [
+                "2dfc05681b4fdd80"
+            ]
+        ]
+    },
+    {
+        "id": "2dfc05681b4fdd80",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SELECT",
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "656836734b7d3a27"
+            ]
+        ]
+    },
+    {
+        "id": "c67289501fc3e3cd",
+        "type": "change",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "RFID Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "rfid",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "522cea21c03cdc90"
+            ]
+        ]
+    },
+    {
+        "id": "656836734b7d3a27",
+        "type": "change",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "PIXY Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "pixy",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "4aac042950cfab13"
+            ]
+        ]
+    },
+    {
+        "id": "2f84a625a717913c",
+        "type": "mqtt in",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "name": "INFRARED",
+        "topic": "eingang/infrared",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 580,
+        "wires": [
+            [
+                "8549bc54c8389b97",
+                "9e4d8434fabba56f"
+            ]
+        ]
+    },
+    {
+        "id": "8549bc54c8389b97",
+        "type": "ui_template",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "group": "19672a31037e28ae",
+        "name": "IR",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "format": "<h2 style=\"text-align: center;\">IR</h2>\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n    <div id=\"ir\"\n        style=\"width:60px; height:60px; border-radius:50%; background-color:grey; box-shadow: 0 0 10px #999;\">\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        var color = \"grey\";\n        if (payload == 0) {\n            color = \"green\";\n        } else {\n            color = \"red\";\n        }\n        document.getElementById(\"ir\").style.backgroundColor = color;\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 270,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e4d8434fabba56f",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "name": "IR Hindernis",
+        "func": "let hindernis = msg.payload;\n\nif(hindernis == 0)\n{\n    msg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (3, '1');`;\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "c5599bda4113ac85"
+            ]
+        ]
+    },
+    {
+        "id": "c5599bda4113ac85",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "558c9f7eab2b08d8",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "INSERT",
+        "x": 440,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d91c092cf5e1f538",
+        "type": "mqtt in",
+        "z": "c938bfb2d64a222e",
+        "g": "23fa941d3b6e675c",
+        "name": "IP",
+        "topic": "esp/eingang/ip",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "320c19d2cb2610d0"
+            ]
+        ]
+    },
+    {
+        "id": "d94f0bc4709f7e50",
+        "type": "mqtt in",
+        "z": "c938bfb2d64a222e",
+        "g": "23fa941d3b6e675c",
+        "name": "MAC",
+        "topic": "esp/eingang/mac",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "480f5318f2d63b48"
+            ]
+        ]
+    },
+    {
+        "id": "08a1b2eeb539c57f",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "23fa941d3b6e675c",
+        "name": "SQL UPDATE",
+        "func": "let ip = msg.payload.ip;\nlet mac = msg.payload.mac;\n\nmsg.topic = `UPDATE device SET ip = '${ip}', mac = '${mac}' WHERE deviceName = 'esp-eingang';`;\nmsg.params = [ip, mac];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "cae95b1d8e6a8960"
+            ]
+        ]
+    },
+    {
+        "id": "cae95b1d8e6a8960",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "23fa941d3b6e675c",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Update Database",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d91c4f3ebfafc4c",
+        "type": "join",
+        "z": "c938bfb2d64a222e",
+        "g": "23fa941d3b6e675c",
+        "name": "Verbinde",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "08a1b2eeb539c57f"
+            ]
+        ]
+    },
+    {
+        "id": "320c19d2cb2610d0",
+        "type": "change",
+        "z": "c938bfb2d64a222e",
+        "g": "23fa941d3b6e675c",
+        "name": "IP Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ip",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "4d91c4f3ebfafc4c"
+            ]
+        ]
+    },
+    {
+        "id": "480f5318f2d63b48",
+        "type": "change",
+        "z": "c938bfb2d64a222e",
+        "g": "23fa941d3b6e675c",
+        "name": "MAC Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "mac",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "4d91c4f3ebfafc4c"
+            ]
+        ]
+    },
+    {
+        "id": "37e0697a6de031fc",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "INSERT AccessLog",
+        "func": "let rfid = flow.get('rfid');\nlet pixy = flow.get('pixy');\nlet id;\n\nif(rfid == null)\n{\n    id = pixy.id;\n}\nelse\n{\n    id = rfid.id;\n}\n\nmsg.topic = `INSERT INTO accessLog (credential_id, status) VALUES ('${id}', '${msg.payload}')`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 480,
+        "wires": [
+            [
+                "414069dc23b6b128"
+            ]
+        ]
+    },
+    {
+        "id": "414069dc23b6b128",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "SQL INSERT AccessLog",
+        "x": 1170,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "522cea21c03cdc90",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "Init Counter = 5",
+        "func": "flow.set('sendCount', 5);\nflow.set('cancelAuth', false);\nflow.set('detectRfid', true);\nflow.set('rfid', msg.payload[0]);\n\nreturn { payload: \"2factor\" };",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 340,
+        "wires": [
+            [
+                "e639b0325e20de79",
+                "d61a7fd1515a4d64"
+            ]
+        ]
+    },
+    {
+        "id": "e639b0325e20de79",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "Check + Decrease",
+        "func": "let cancel = flow.get('cancelAuth');\nlet count = flow.get('sendCount');\n\nif (cancel) return null;\nif (count < 0) return null;\nflow.set('sendCount', count - 1);\n\nif (count == 0)\n{\n    flow.set('detectRfid', false);\n    return {payload: \"timeout\"};\n}\n\nreturn { payload: \"countdown\" };",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 340,
+        "wires": [
+            [
+                "d61a7fd1515a4d64",
+                "294b9eda5cbab777"
+            ]
+        ]
+    },
+    {
+        "id": "d61a7fd1515a4d64",
+        "type": "mqtt out",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "MQTT to ESP",
+        "topic": "eingang/display/access",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2809b599cc4c1905",
+        "x": 1200,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "4aac042950cfab13",
+        "type": "function",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "Cancel Auth",
+        "func": "let pixy;\nObject.keys(msg.payload).length == 0 ? pixy = -1 : pixy = msg.payload[0].user_id;\n\nflow.set('pixy', pixy);\nflow.set(\"cancelAuth\", true);\n\nif(flow.get('detectRfid')){\n    flow.set('detectRfid', false);\n\n    if(flow.get('rfid').user_id == pixy)\n    {\n        return { payload: \"granted\" };\n    }\n    else\n    {\n        return { payload: \"denied\" };\n    }\n}\nelse\n{\n    return null;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 420,
+        "wires": [
+            [
+                "d61a7fd1515a4d64",
+                "37e0697a6de031fc"
+            ]
+        ]
+    },
+    {
+        "id": "294b9eda5cbab777",
+        "type": "delay",
+        "z": "c938bfb2d64a222e",
+        "g": "4a671343079fb07a",
+        "name": "2s Delay",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1160,
+        "y": 340,
+        "wires": [
+            [
+                "e639b0325e20de79"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f6",
+        "type": "inject",
+        "z": "c938bfb2d64a222e",
+        "g": "528eae0a7c13d853",
+        "name": "Täglich löschen",
+        "props": [],
+        "repeat": "",
+        "crontab": "00 03 * * *",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "x": 150,
+        "y": 860,
+        "wires": [
+            [
+                "f6e5d4c3b2a1"
+            ]
+        ]
+    },
+    {
+        "id": "f6e5d4c3b2a1",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "528eae0a7c13d853",
+        "mydb": "sqlite_config",
+        "sqlquery": "fixed",
+        "sql": "DELETE FROM sensorData WHERE timestamp < datetime('now', '-24 hour');",
+        "name": "Daten löschen SensorData",
+        "x": 400,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd396f67859143ed",
+        "type": "inject",
+        "z": "c938bfb2d64a222e",
+        "g": "528eae0a7c13d853",
+        "name": "Wöchentlich löschen",
+        "props": [],
+        "repeat": "",
+        "crontab": "00 03 * * 1",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "x": 160,
+        "y": 920,
+        "wires": [
+            [
+                "f499713bfc3f4ab1"
+            ]
+        ]
+    },
+    {
+        "id": "f499713bfc3f4ab1",
+        "type": "sqlite",
+        "z": "c938bfb2d64a222e",
+        "g": "528eae0a7c13d853",
+        "mydb": "sqlite_config",
+        "sqlquery": "fixed",
+        "sql": "DELETE FROM accessLog WHERE timestamp < datetime('now', '-168 hour');",
+        "name": "Daten löschen AccessLog",
+        "x": 390,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0c475a45d493829e",
+        "type": "mqtt in",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "ULTRASONIC",
+        "topic": "lager1/ultra",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 340,
+        "wires": [
+            [
+                "9c4dc8e075dd53c2",
+                "ae6c2d2d9f080250"
+            ]
+        ]
+    },
+    {
+        "id": "9c4dc8e075dd53c2",
+        "type": "ui_template",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "group": "41a9fbc91aec26f2",
+        "name": "Ultrasonic",
+        "order": 1,
+        "width": 6,
+        "height": 3,
+        "format": "<h2 style=\"text-align: center;\">ULTRASONIC</h2>\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n    <div id=\"ultra\"\n        style=\"width:60px; height:60px; border-radius:50%; background-color:grey; box-shadow: 0 0 10px #999;\">\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        var color = \"grey\";\n        if (payload > 0.0 && payload <= 200.0) {\n            color = \"green\";\n        } else {\n            color = \"red\";\n        }\n        document.getElementById(\"ultra\").style.backgroundColor = color;\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 280,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cbdfe8a55785602f",
+        "type": "mqtt in",
+        "z": "7403d64f0edf50af",
+        "g": "3ef490d22396d9c2",
+        "name": "LASTWILL_Lager1",
+        "topic": "esp/lager1/status",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "b9b54214953909e4"
+            ]
+        ]
+    },
+    {
+        "id": "f5f807f9b751d4e8",
+        "type": "e-mail",
+        "z": "7403d64f0edf50af",
+        "g": "3ef490d22396d9c2",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "emil.lemmer94@gmail.com",
+        "dname": "LastWill-Mail",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b9b54214953909e4",
+        "type": "function",
+        "z": "7403d64f0edf50af",
+        "g": "3ef490d22396d9c2",
+        "name": "Verbindungsverlust",
+        "func": "if(!msg.payload)\n{\n    msg.payload = \"Der ESP 1 im Lager ist außer Betrieb!\\nBitte kümmern Sie sich darum schnellstmöglich.\";\n    return msg;\n}\nelse\n{\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 60,
+        "wires": [
+            [
+                "f5f807f9b751d4e8"
+            ]
+        ]
+    },
+    {
+        "id": "9c68d84392896c46",
+        "type": "mqtt in",
+        "z": "7403d64f0edf50af",
+        "g": "3fbc6a3cb9bb4e80",
+        "name": "IP",
+        "topic": "esp/lager1/ip",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "5ab543f8358d9e73"
+            ]
+        ]
+    },
+    {
+        "id": "0d1e258a52cbb792",
+        "type": "mqtt in",
+        "z": "7403d64f0edf50af",
+        "g": "3fbc6a3cb9bb4e80",
+        "name": "MAC",
+        "topic": "esp/lager1/mac",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "29ce9dbaf27fe2e1"
+            ]
+        ]
+    },
+    {
+        "id": "0271f3bc7c2438aa",
+        "type": "function",
+        "z": "7403d64f0edf50af",
+        "g": "3fbc6a3cb9bb4e80",
+        "name": "SQL UPDATE",
+        "func": "let ip = msg.payload.ip;\nlet mac = msg.payload.mac;\n\nmsg.topic = `UPDATE device SET ip = '${ip}', mac = '${mac}' WHERE deviceName = 'esp-lager1';`;\nmsg.params = [ip, mac];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "825a7c31340147a4"
+            ]
+        ]
+    },
+    {
+        "id": "825a7c31340147a4",
+        "type": "sqlite",
+        "z": "7403d64f0edf50af",
+        "g": "3fbc6a3cb9bb4e80",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Update Database",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea1b39fbaec4d875",
+        "type": "join",
+        "z": "7403d64f0edf50af",
+        "g": "3fbc6a3cb9bb4e80",
+        "name": "Verbinde",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "0271f3bc7c2438aa"
+            ]
+        ]
+    },
+    {
+        "id": "5ab543f8358d9e73",
+        "type": "change",
+        "z": "7403d64f0edf50af",
+        "g": "3fbc6a3cb9bb4e80",
+        "name": "IP Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ip",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "ea1b39fbaec4d875"
+            ]
+        ]
+    },
+    {
+        "id": "29ce9dbaf27fe2e1",
+        "type": "change",
+        "z": "7403d64f0edf50af",
+        "g": "3fbc6a3cb9bb4e80",
+        "name": "MAC Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "mac",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "ea1b39fbaec4d875"
+            ]
+        ]
+    },
+    {
+        "id": "ae6c2d2d9f080250",
+        "type": "function",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "Passender Abstand",
+        "func": "let abstand = msg.payload;\n\nif(abstand > 0.0 && abstand <= 200.0)\n{\n    msg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (2, '1');`;\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "031fc8bac2c05212"
+            ]
+        ]
+    },
+    {
+        "id": "031fc8bac2c05212",
+        "type": "sqlite",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "INSERT",
+        "x": 500,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f20c7739b8fb1a56",
+        "type": "mqtt in",
+        "z": "88257daac3ab0f44",
+        "g": "ecbed6fa3fc560dc",
+        "name": "LASTWILL_Lager2",
+        "topic": "esp/lager2/status",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "fa548ba8b2fb9338"
+            ]
+        ]
+    },
+    {
+        "id": "57cf22c66a593e1f",
+        "type": "e-mail",
+        "z": "88257daac3ab0f44",
+        "g": "ecbed6fa3fc560dc",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "emil.lemmer94@gmail.com",
+        "dname": "LastWill-Mail",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fa548ba8b2fb9338",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "ecbed6fa3fc560dc",
+        "name": "Verbindungsverlust",
+        "func": "if(!msg.payload)\n{\n    msg.payload = \"Der ESP 2 im Lager ist außer Betrieb!\\nBitte kümmern Sie sich darum schnellstmöglich.\";\n    return msg;\n}\nelse\n{\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 60,
+        "wires": [
+            [
+                "57cf22c66a593e1f"
+            ]
+        ]
+    },
+    {
+        "id": "696b2b350a5e9a40",
+        "type": "mqtt in",
+        "z": "2da02b444bea3b70",
+        "g": "e5585d08d810d2f5",
+        "name": "LASTWILL_Lager3",
+        "topic": "esp/lager3/status",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "4ed96ea84cf03a8a"
+            ]
+        ]
+    },
+    {
+        "id": "663b474054f0b764",
+        "type": "e-mail",
+        "z": "2da02b444bea3b70",
+        "g": "e5585d08d810d2f5",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "emil.lemmer94@gmail.com",
+        "dname": "LastWill-Mail",
+        "x": 550,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "4ed96ea84cf03a8a",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e5585d08d810d2f5",
+        "name": "Verbindungsverlust",
+        "func": "if(!msg.payload)\n{\n    msg.payload = \"Der ESP 3 im Lager ist außer Betrieb!\\nBitte kümmern Sie sich darum schnellstmöglich.\";\n    return msg;\n}\nelse\n{\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 60,
+        "wires": [
+            [
+                "663b474054f0b764"
+            ]
+        ]
+    }
+]

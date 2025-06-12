@@ -2,7 +2,7 @@
 #include "mqtt_client.h"
 #include "parameter.h"
 
-Ultrasonic::Ultrasonic(uint8_t echoPin,uint8_t trigPin, const char *publishTopic)
+Ultrasonic::Ultrasonic(uint8_t echoPin, uint8_t trigPin, const char *publishTopic)
     : _echoPin(echoPin), _trigPin(trigPin), _publishTopic(publishTopic) {}
 
 void Ultrasonic::begin()
@@ -15,18 +15,15 @@ void Ultrasonic::begin()
 
 void Ultrasonic::loop()
 {
-    long duration,distance;
-    digitalWrite(ULTRA_TRIG, LOW); 
-    delayMicroseconds(2);
-
-    digitalWrite(ULTRA_TRIG, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(ULTRA_TRIG, LOW);
-
-    duration = pulseIn(ULTRA_ECHO, HIGH);
     
-    //Calculate the distance (in cm) based on the speed of sound.
-    distance = duration/58.2;
+    digitalWrite(_trigPin, LOW);
+    delayMicroseconds(2);
+    digitalWrite(_trigPin, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(_trigPin, LOW);
+
+    long duration = pulseIn(_echoPin, HIGH);
+    double distance = duration / 58;
 
     publishMessage(_publishTopic, String(distance).c_str());
 }

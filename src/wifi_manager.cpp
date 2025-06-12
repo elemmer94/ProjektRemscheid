@@ -4,55 +4,59 @@
 #include "timer.h"
 
 extern unsigned long myTimer;
+extern IPAddress localIP;
+extern String macAddress;
 
 void setupWiFi()
 {
     Serial.print("\n🔌 Connecting to WiFi: ");
     Serial.print(WIFI_SSID);
 
+    WiFi.mode(WIFI_STA); // Station-Modus
     WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
     WiFi.setAutoReconnect(true);
     WiFi.persistent(true);
 
-    while (WiFi.status() != WL_CONNECTED)
+    while (WiFi.status() != WL_CONNECTED && !timePassed(myTimer, INTERVALL))
     {
         Serial.print(".");
         delay(500);
     }
-    Serial.println();
 
     if (WiFi.status() == WL_CONNECTED)
     {
-        publishMessage(ESP_IP, WiFi.localIP().toString().c_str());
-        publishMessage(ESP_MAC, WiFi.macAddress().c_str());
+        Serial.println("\n🟢 WLAN verbunden.");
     }
     else
     {
-        Serial.println("❌ WLAN Verbindung fehlgeschlagen.");
+        Serial.println("\n❌ WLAN Verbindung fehlgeschlagen.");
+        myTimer = millis(); // neuen Versuch merken
     }
 }
 
 void reconnectWiFi()
 {
-    myTimer = 0;
-
     if (WiFi.status() != WL_CONNECTED)
     {
+        WiFi.disconnect();
+        Serial.print("\n🔌 Connecting to WiFi: ");
+        Serial.print(WIFI_SSID);
         WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
-        while (WiFi.status() != WL_CONNECTED && timePassed(myTimer, INTERVALL))
+        while (WiFi.status() != WL_CONNECTED && !timePassed(myTimer, INTERVALL))
         {
-            delay(500);
             Serial.print(".");
+            delay(500);
         }
 
         if (WiFi.status() == WL_CONNECTED)
         {
-            publishMessage(ESP_IP, WiFi.localIP().toString().c_str());
+            Serial.println("\n🟢 WLAN verbunden.");
         }
         else
         {
             Serial.println("\n❌ WLAN Verbindung fehlgeschlagen.");
+            myTimer = millis(); // neuen Versuch merken
         }
     }
 }

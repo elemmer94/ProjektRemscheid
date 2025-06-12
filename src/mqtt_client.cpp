@@ -5,6 +5,8 @@
 #include "parameter.h"
 #include "timer.h"
 
+bool initialize = false;
+
 extern unsigned long myTimer;
 
 WiFiClient espClient;
@@ -30,26 +32,7 @@ void setupMQTT()
     client.setServer(RASPI_IP, 1883);
     client.setCallback(callback);
 
-    if (WiFi.status() == WL_CONNECTED)
-    {
-        if (client.connect(ESP_NAME))
-        {
-            for (const auto &entry : topicHandlers)
-            {
-                client.subscribe(entry.first.c_str());
-            }
-            Serial.println("🟢 MQTT verbunden.");
-        }
-        else
-        {
-            Serial.println("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
-            Serial.println(client.state());
-        }
-    }
-    else
-    {
-        Serial.println("❌ MQTT überspringen: WLAN ist nicht verbunden.");
-    }
+    reconnectMQTT();
 }
 
 void publishMessage(const char *topic, const char *message)
@@ -69,27 +52,43 @@ void subscribeToTopic(const char *topic, std::function<void(const String &)> han
 
 void reconnectMQTT()
 {
-    myTimer = 0;
-
-    while (!client.connected() && timePassed(myTimer, INTERVALL))
+    if (WiFi.status() != WL_CONNECTED)
     {
-        if (client.connect(ESP_NAME))
-        {
-            Serial.println("✅ MQTT verbunden.");
-            for (const auto &entry : topicHandlers)
-            {
-                client.subscribe(entry.first.c_str());
-            }
-        }
-        else
-        {
-            Serial.print("❌ MQTT Verbindung fehlgeschlagen.\nStatus: ");
-            Serial.println(client.state());
-        }
-        delay(500);
+        Serial.println("❌ MQTT überspringen: WLAN nicht verbunden.");
+        return;
     }
+
     if (client.connected())
     {
         client.loop();
+        if (!initialize)
+        {
+            publishMessage(ESP_IP, WiFi.localIP().toString().c_str());
+            publishMessage(ESP_MAC, WiFi.macAddress().c_str());
+            initialize = true;
+        }
+        return;
+    }
+
+    if (!timePassed(myTimer, INTERVALL))
+        return; // Schon verbunden oder noch nicht Zeit für neuen Versuch
+
+    myTimer = millis(); // neuen Versuch merken
+
+    if (client.connect(ESP_NAME, nullptr, nullptr, ESP_LASTWILL, 1, true, "false"))
+    {
+        Serial.println("🟢 MQTT verbunden.");
+        // Alle Topics neu abonnieren
+        for (const auto &entry : topicHandlers)
+        {
+            client.subscribe(entry.first.c_str());
+        }
+        // Sobald verbunden: "online" senden
+        client.publish(ESP_LASTWILL, "true", true); // Retained
+    }
+    else
+    {
+        Serial.print("❌ MQTT Verbindung fehlgeschlagen. Status: ");
+        Serial.println(client.state());
     }
 }

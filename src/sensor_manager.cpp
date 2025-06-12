@@ -15,17 +15,19 @@ void SensorManager::begin()
     // Erstelle Sensoren abhängig vom ESP
     if (strcmp(ESP_NAME, "ESP_1") == 0)
     {
-        sensors.push_back(new RFIDSensor(RFID_SS, RFID_RST, RFID_SEND));
+        // Authentifizierung
+        sensors.push_back(new RFIDSensor(RFID_SS, RFID_SEND));
         sensors.push_back(new PixySensor(PIXY_SS, PIXY_SEND));
         sensors.push_back(new DigitalSensor(INFRARED_PIN, INFRARED_SEND));
-        // sensors.push_back(new Ultrasonic(ULTRA_ECHO,ULTRA_TRIG,ULTRA_SEND));
+        sensors.push_back(new OLedDisplay(DISPLAY_SCK, DISPLAY_SDA, RELAIS, DISPLAY_ACCESS));
+
+        // Spannungsmessung
         sensors.push_back(new Voltage(VOLTAGE, VOLTAGE_SEND));
-        sensors.push_back(new OLedDisplay(DISPLAY_SCK, DISPLAY_SDA, DISPLAY_RECEIVE));
     }
     else if (strcmp(ESP_NAME, "ESP_2") == 0)
     {
-        sensors.push_back(new DigitalSensor(PIR_PIN, PIR_SEND));
         sensors.push_back(new AnalogSensor(TEMP1_PIN, TEMP1_SEND));
+        sensors.push_back(new Ultrasonic(ULTRA_ECHO,ULTRA_TRIG,ULTRA_SEND));
     }
     else if (strcmp(ESP_NAME, "ESP_3") == 0)
     {
@@ -35,6 +37,7 @@ void SensorManager::begin()
     }
     else
     {
+        sensors.push_back(new DigitalSensor(PIR_PIN, PIR_SEND));
         // DHT11 hinzufügen
         sensors.push_back(new AnalogSensor(VAPOR_PIN, VAPOR_SEND));
     }

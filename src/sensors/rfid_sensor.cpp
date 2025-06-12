@@ -3,19 +3,25 @@
 #include <SPI.h>
 #include "mqtt_client.h"
 
-RFIDSensor::RFIDSensor(uint8_t ssPin, uint8_t rstPin, const char *publishTopic)
-    : _ssPin(ssPin), _rstPin(rstPin), _publishTopic(publishTopic), rfid(nullptr) {}
+RFIDSensor::RFIDSensor(uint8_t ssPin, const char *publishTopic)
+    : _ssPin(ssPin), _publishTopic(publishTopic), rfid(nullptr) {}
 
 void RFIDSensor::begin()
 {
+    // SPI konfigurieren
+    pinMode(_ssPin, OUTPUT);
+    digitalWrite(_ssPin, HIGH); // CS high (inaktiv)
+
     SPI.begin();
-    rfid = new MFRC522(_ssPin, _rstPin);
+    rfid = new MFRC522(_ssPin);
     rfid->PCD_Init();
     Serial.println("🟢 RFID bereit.");
 }
 
 void RFIDSensor::loop()
 {
+    digitalWrite(_ssPin, LOW); // Aktivieren
+
     if (!rfid->PICC_IsNewCardPresent() || !rfid->PICC_ReadCardSerial())
         return;
 
@@ -30,4 +36,6 @@ void RFIDSensor::loop()
     publishMessage(_publishTopic, uid.c_str());
     rfid->PICC_HaltA();
     rfid->PCD_StopCrypto1();
+
+    digitalWrite(_ssPin, HIGH); // Deaktivieren
 }
