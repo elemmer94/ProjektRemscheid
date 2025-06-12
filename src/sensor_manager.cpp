@@ -8,6 +8,7 @@
 #include "sensors/voltage.h"
 #include "sensors/ultrasonic_sensor.h"
 #include "sensors/analog_temp.h"
+#include "sensors/ds18s20_sensor.h"
 
 std::vector<SensorInterface *> sensors;
 
@@ -33,7 +34,7 @@ void SensorManager::begin()
     else if (strcmp(ESP_NAME, "ESP_3") == 0)
     {
         sensors.push_back(new DigitalSensor(FLAME_PIN, FLAME_SEND));
-        // Temperatursensor 18B20 hinzufügen
+        sensors.push_back(new DS18S20_TEMP(TEMP2_PIN, TEMP2_SEND));
         sensors.push_back(new AnalogSensor(GAS_PIN, GAS_SEND));
     }
     else
