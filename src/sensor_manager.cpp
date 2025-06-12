@@ -7,6 +7,7 @@
 #include "sensors/oled_display.h"
 #include "sensors/voltage.h"
 #include "sensors/ultrasonic_sensor.h"
+#include "sensors/analog_temp.h"
 
 std::vector<SensorInterface *> sensors;
 
@@ -26,7 +27,7 @@ void SensorManager::begin()
     }
     else if (strcmp(ESP_NAME, "ESP_2") == 0)
     {
-        sensors.push_back(new AnalogSensor(TEMP1_PIN, TEMP1_SEND));
+        sensors.push_back(new AnalogTemp(TEMP1_PIN, TEMP1_SEND));
         sensors.push_back(new Ultrasonic(ULTRA_ECHO,ULTRA_TRIG,ULTRA_SEND));
     }
     else if (strcmp(ESP_NAME, "ESP_3") == 0)

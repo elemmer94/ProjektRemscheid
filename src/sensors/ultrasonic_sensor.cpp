@@ -9,6 +9,7 @@ void Ultrasonic::begin()
 {
     pinMode(_trigPin, OUTPUT);
     pinMode(_echoPin, INPUT);
+    pinMode(LED_PIN, OUTPUT);
 
     Serial.println("🟢 Ultraschalsensor bereit.");
 }
@@ -23,7 +24,17 @@ void Ultrasonic::loop()
     digitalWrite(_trigPin, LOW);
 
     long duration = pulseIn(_echoPin, HIGH);
-    double distance = duration / 58;
+    double distance = duration / 58.2;
+
+    // LED
+    if(distance > 0.0 && distance <= 200.0)
+    {
+        digitalWrite(LED_PIN, HIGH);
+    }
+    else
+    {
+        digitalWrite(LED_PIN, LOW);
+    }
 
     publishMessage(_publishTopic, String(distance).c_str());
 }

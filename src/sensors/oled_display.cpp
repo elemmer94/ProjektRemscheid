@@ -79,6 +79,16 @@ void OLedDisplay::handleAccessResponse(const String &message)
         u8g2->setFont(u8g2_font_ncenB18_tf);
         u8g2->drawStr(9, 45, "Timeout");
         u8g2->sendBuffer();
+
+        delay(500);
+        u8g2->clearBuffer();
+        u8g2->sendBuffer();
+
+        Serial.println("Zugang verboten!");
+        u8g2->setFont(u8g2_font_ncenB14_tf);
+        u8g2->drawStr(24, 24, "Zugang");
+        u8g2->drawStr(18, 54, "verboten!");
+        u8g2->sendBuffer();
     }
 
     delay(500);
