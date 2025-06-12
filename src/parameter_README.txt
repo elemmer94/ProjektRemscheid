@@ -1,4 +1,4 @@
-Erstelle eine Datei parameter.h mit folgendem Inhalt:
+// Erstelle eine Datei parameter.h mit folgendem Inhalt:
 
 // Definitionen der variablen Parameter
 
@@ -27,7 +27,7 @@ Erstelle eine Datei parameter.h mit folgendem Inhalt:
 #define RFID_SS D8
 #define DISPLAY_SCK D4
 #define DISPLAY_SDA D2
-#define PIXY_SS D8
+#define PIXY_SS D1
 #define RELAIS D3
 #define VOLTAGE A0
 // ESP 2
