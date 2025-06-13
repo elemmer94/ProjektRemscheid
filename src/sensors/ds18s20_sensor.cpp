@@ -18,6 +18,6 @@ void DS18S20_TEMP::loop()
 
     if (temperature != DEVICE_DISCONNECTED_C)
     {
-        publishMessage(_publishTopic, String(temperature).c_str());
+        publishMessage(_publishTopic, String(temperature - 2).c_str());
     }
 }

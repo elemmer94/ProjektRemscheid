@@ -9,6 +9,7 @@
 #include "sensors/ultrasonic_sensor.h"
 #include "sensors/analog_temp.h"
 #include "sensors/ds18s20_sensor.h"
+#include "sensors/dht11.h"
 
 std::vector<SensorInterface *> sensors;
 
@@ -40,7 +41,7 @@ void SensorManager::begin()
     else
     {
         sensors.push_back(new DigitalSensor(PIR_PIN, PIR_SEND));
-        // DHT11 hinzufügen
+        sensors.push_back(new DHTSensor(TEMP_HUMIDITY_PIN, TEMP_HUMIDITY_SEND));
         sensors.push_back(new AnalogSensor(VAPOR_PIN, VAPOR_SEND));
     }
 

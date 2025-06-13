@@ -31,6 +31,14 @@
         "env": []
     },
     {
+        "id": "332a407294182bfa",
+        "type": "tab",
+        "label": "RASPI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "caee75c53553d1b6",
         "type": "subflow",
         "name": "Mittelwert der Daten von einer Minute",
@@ -112,12 +120,14 @@
             "2f84a625a717913c",
             "8549bc54c8389b97",
             "9e4d8434fabba56f",
-            "c5599bda4113ac85"
+            "207deca4fcc27131",
+            "2cebf81d17cebded",
+            "fd0e6d3a488b89d6"
         ],
         "x": 14,
         "y": 539,
         "w": 852,
-        "h": 262
+        "h": 322
     },
     {
         "id": "52646d9484b43ebf",
@@ -151,12 +161,19 @@
             "0c475a45d493829e",
             "9c4dc8e075dd53c2",
             "ae6c2d2d9f080250",
-            "031fc8bac2c05212"
+            "d1e8703ee0337428",
+            "3ed805342cb0eaac",
+            "6c08e759481899ba",
+            "ea5d3e511e0f6153",
+            "93630a5fd4808f73",
+            "88038fb4aca15e16",
+            "6e3e63382bfd7e80",
+            "cd81e7171d2277eb"
         ],
         "x": 14,
         "y": 299,
-        "w": 572,
-        "h": 142
+        "w": 872,
+        "h": 322
     },
     {
         "id": "3ef490d22396d9c2",
@@ -262,9 +279,55 @@
         "h": 162
     },
     {
+        "id": "8c66ca0ebcc0bd43",
+        "type": "group",
+        "z": "88257daac3ab0f44",
+        "name": "ESP Daten",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "b489204d1102fee6",
+            "17c97ef166121ebc",
+            "52b4931c852d9220",
+            "d5681310ac6ada9d",
+            "7ab357814690ffb4",
+            "8c1c5bd1f3aed1db",
+            "e5353fece82a2046"
+        ],
+        "x": 14,
+        "y": 119,
+        "w": 872,
+        "h": 162
+    },
+    {
+        "id": "dd90a3228a29b9dd",
+        "type": "group",
+        "z": "2da02b444bea3b70",
+        "name": "ESP Daten",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "8a6a17665ba13e0c",
+            "d714a98c70cbdeea",
+            "0354422341ee6775",
+            "af6ab78457ce6704",
+            "f6a90ae88eb6ad31",
+            "c8d6b07364ddbce0",
+            "c318206e193f5513"
+        ],
+        "x": 14,
+        "y": 119,
+        "w": 872,
+        "h": 162
+    },
+    {
         "id": "528eae0a7c13d853",
         "type": "group",
-        "z": "c938bfb2d64a222e",
+        "z": "332a407294182bfa",
         "name": "Daten löschen",
         "style": {
             "fill": "#ffefbf",
@@ -277,9 +340,83 @@
             "f499713bfc3f4ab1"
         ],
         "x": 14,
-        "y": 819,
+        "y": 19,
         "w": 532,
         "h": 142
+    },
+    {
+        "id": "c0b2a133b4df810d",
+        "type": "group",
+        "z": "88257daac3ab0f44",
+        "name": "Sensordaten",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "7d5891b5db87413f",
+            "f4da0e85ac8031ce",
+            "1556e0557d3875b2",
+            "9bf5bf80b817a8df",
+            "231ac990d004dd3c",
+            "bb0b0301928cf70b",
+            "6a2ee39b846f85ee",
+            "9d2f8a73db15da1d",
+            "1cee5e4fc9938ea1",
+            "ad7925b693b45aac",
+            "21265b7402ae6e1f",
+            "2d2f605d1a26d8c0",
+            "a7c15631bd1f8056",
+            "73bff636b6c6ae1e",
+            "e52c673fdccec4c0",
+            "08c6667a825038e2",
+            "c1a64e780dc2f7b3",
+            "ed711fb35d6d5902",
+            "aa1f47f5b7d0c608"
+        ],
+        "x": 14,
+        "y": 299,
+        "w": 1012,
+        "h": 462
+    },
+    {
+        "id": "e6290a6a6c23946a",
+        "type": "group",
+        "z": "2da02b444bea3b70",
+        "name": "Sensordaten",
+        "style": {
+            "fill": "#bfdbef",
+            "label": true
+        },
+        "nodes": [
+            "a43ba62238e44975",
+            "b3bc09518630ae68",
+            "3c636732a6214acf",
+            "32c2f1f43857d523",
+            "2caf2fa02779e81f",
+            "786b46fdf956a2a5",
+            "3954e81368a6906a",
+            "3995cdf1e3b80adb",
+            "d6706e7bef741531",
+            "22fee5486c486419",
+            "91d49ebf5b2ba9f2",
+            "1743a0c1807d2a7e",
+            "8d8737171fb20117",
+            "6a294c716814657f",
+            "d09b172b65bec1c7",
+            "9b6a68897cce4308",
+            "291d292a2d2997fa",
+            "ea155c3259b62f7e",
+            "02688872ad03fd76",
+            "87c3955540487aae",
+            "eff7088a1567164b",
+            "6b6e54f07240d883",
+            "0922e19614512de7"
+        ],
+        "x": 14,
+        "y": 299,
+        "w": 1212,
+        "h": 642
     },
     {
         "id": "sqlite_config",
@@ -317,15 +454,6 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
-    },
-    {
-        "id": "c9c90e5cccfde5ea",
-        "type": "ui_tab",
-        "name": "ESP 1",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "acd381310640a3b8",
@@ -425,20 +553,9 @@
         }
     },
     {
-        "id": "19672a31037e28ae",
-        "type": "ui_group",
-        "name": "Eingang",
-        "tab": "c9c90e5cccfde5ea",
-        "order": 1,
-        "disp": true,
-        "width": 12,
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "28785c10990aeda9",
         "type": "ui_tab",
-        "name": "ESP 2",
+        "name": "ESPs",
         "icon": "dashboard",
         "order": 2,
         "disabled": false,
@@ -449,71 +566,44 @@
         "type": "ui_group",
         "name": "Lager 1",
         "tab": "28785c10990aeda9",
-        "order": 1,
+        "order": 2,
         "disp": true,
-        "width": 6,
+        "width": 10,
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "0ded6cebe130876e",
-        "type": "ui_tab",
-        "name": "ESP 3",
-        "icon": "dashboard",
-        "order": 3,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "c19e42e73336857f",
         "type": "ui_group",
         "name": "Lager 2",
-        "tab": "0ded6cebe130876e",
-        "order": 1,
+        "tab": "28785c10990aeda9",
+        "order": 3,
         "disp": true,
-        "width": 6,
+        "width": 20,
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "4b0df29d288f6953",
-        "type": "ui_tab",
-        "name": "ESP 4",
-        "icon": "dashboard",
-        "order": 4,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "56f6f698198454b4",
         "type": "ui_group",
         "name": "Lager 3",
-        "tab": "4b0df29d288f6953",
-        "order": 1,
+        "tab": "28785c10990aeda9",
+        "order": 4,
         "disp": true,
-        "width": 6,
+        "width": 20,
         "collapse": false,
         "className": ""
     },
     {
-        "id": "mqttbroker",
-        "type": "mqtt-broker",
-        "name": "local Mosquitto",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "",
-        "usetls": false,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
+        "id": "19672a31037e28ae",
+        "type": "ui_group",
+        "name": "Eingang",
+        "tab": "28785c10990aeda9",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "8878c7762a2d578a",
@@ -593,11 +683,12 @@
         "rh": 0,
         "inputs": 0,
         "x": 100,
-        "y": 700,
+        "y": 760,
         "wires": [
             [
                 "6a029c9223ebcefa",
-                "96c071d6f31d007c"
+                "96c071d6f31d007c",
+                "207deca4fcc27131"
             ]
         ]
     },
@@ -657,9 +748,7 @@
         "x": 350,
         "y": 60,
         "wires": [
-            [
-                "5c270d62b3cebdb7"
-            ]
+            []
         ]
     },
     {
@@ -669,7 +758,7 @@
         "g": "558c9f7eab2b08d8",
         "name": "",
         "x": 350,
-        "y": 700,
+        "y": 760,
         "wires": [
             [
                 "0232d84cbc888b6f"
@@ -686,7 +775,7 @@
         "sql": "",
         "name": "Write Database",
         "x": 760,
-        "y": 700,
+        "y": 580,
         "wires": [
             []
         ]
@@ -696,7 +785,7 @@
         "type": "function",
         "z": "c938bfb2d64a222e",
         "g": "558c9f7eab2b08d8",
-        "name": "SQL INSERT",
+        "name": "INSERT SensorData",
         "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (1, ${value});`;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -704,8 +793,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 590,
-        "y": 700,
+        "x": 620,
+        "y": 760,
         "wires": [
             [
                 "681ba5f0c5696751"
@@ -727,18 +816,18 @@
         "label": "V",
         "format": "{{value}}",
         "min": 0,
-        "max": "5",
+        "max": "6.6",
         "colors": [
+            "#ca3838",
             "#00b500",
-            "#e6e600",
             "#ca3838"
         ],
-        "seg1": "3.3",
-        "seg2": "3.6",
+        "seg1": "2.7",
+        "seg2": "3.9",
         "diff": false,
         "className": "",
         "x": 270,
-        "y": 760,
+        "y": 820,
         "wires": []
     },
     {
@@ -790,7 +879,7 @@
         "type": "function",
         "z": "c938bfb2d64a222e",
         "g": "4a671343079fb07a",
-        "name": "SQL SELECT",
+        "name": "SELECT credential",
         "func": "let type = msg.topic.substring(msg.topic.indexOf('/') + 1);\nlet value = msg.payload;\n\nmsg.topic = `SELECT id, user_id FROM credential WHERE type = '${type}' AND value = '${value}';`;\nmsg.params = [type, value];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -798,7 +887,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
+        "x": 250,
         "y": 340,
         "wires": [
             [
@@ -815,7 +904,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "SELECT",
-        "x": 400,
+        "x": 420,
         "y": 340,
         "wires": [
             [
@@ -828,7 +917,7 @@
         "type": "function",
         "z": "c938bfb2d64a222e",
         "g": "4a671343079fb07a",
-        "name": "SQL SELECT",
+        "name": "SELECT credential",
         "func": "let type = msg.topic.substring(msg.topic.indexOf('/') + 1);\nlet value = msg.payload;\n\nmsg.topic = `SELECT id, user_id FROM credential WHERE type = '${type}' AND value = '${value}';`;\nmsg.params = [type, value];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -836,7 +925,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 240,
+        "x": 250,
         "y": 420,
         "wires": [
             [
@@ -853,7 +942,7 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "SELECT",
-        "x": 400,
+        "x": 420,
         "y": 420,
         "wires": [
             [
@@ -881,7 +970,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
+        "x": 570,
         "y": 340,
         "wires": [
             [
@@ -909,7 +998,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 550,
+        "x": 570,
         "y": 420,
         "wires": [
             [
@@ -948,7 +1037,7 @@
         "group": "19672a31037e28ae",
         "name": "IR",
         "order": 1,
-        "width": 6,
+        "width": 10,
         "height": 3,
         "format": "<h2 style=\"text-align: center;\">IR</h2>\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n    <div id=\"ir\"\n        style=\"width:60px; height:60px; border-radius:50%; background-color:grey; box-shadow: 0 0 10px #999;\">\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        var color = \"grey\";\n        if (payload == 0) {\n            color = \"green\";\n        } else {\n            color = \"red\";\n        }\n        document.getElementById(\"ir\").style.backgroundColor = color;\n    });\n})(scope);\n</script>",
         "storeOutMessages": true,
@@ -967,7 +1056,7 @@
         "type": "function",
         "z": "c938bfb2d64a222e",
         "g": "558c9f7eab2b08d8",
-        "name": "IR Hindernis",
+        "name": "INSERT SensorData",
         "func": "let hindernis = msg.payload;\n\nif(hindernis == 0)\n{\n    msg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (3, '1');`;\n    return msg;\n}\n\nreturn null;",
         "outputs": 1,
         "timeout": 0,
@@ -975,27 +1064,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
+        "x": 320,
         "y": 580,
         "wires": [
             [
-                "c5599bda4113ac85"
+                "fd0e6d3a488b89d6"
             ]
-        ]
-    },
-    {
-        "id": "c5599bda4113ac85",
-        "type": "sqlite",
-        "z": "c938bfb2d64a222e",
-        "g": "558c9f7eab2b08d8",
-        "mydb": "sqlite_config",
-        "sqlquery": "msg.topic",
-        "sql": "",
-        "name": "INSERT",
-        "x": 440,
-        "y": 580,
-        "wires": [
-            []
         ]
     },
     {
@@ -1047,7 +1121,7 @@
         "type": "function",
         "z": "c938bfb2d64a222e",
         "g": "23fa941d3b6e675c",
-        "name": "SQL UPDATE",
+        "name": "UPDATE device",
         "func": "let ip = msg.payload.ip;\nlet mac = msg.payload.mac;\n\nmsg.topic = `UPDATE device SET ip = '${ip}', mac = '${mac}' WHERE deviceName = 'esp-eingang';`;\nmsg.params = [ip, mac];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1312,73 +1386,76 @@
         ]
     },
     {
-        "id": "a1b2c3d4e5f6",
-        "type": "inject",
+        "id": "207deca4fcc27131",
+        "type": "function",
         "z": "c938bfb2d64a222e",
-        "g": "528eae0a7c13d853",
-        "name": "Täglich löschen",
-        "props": [],
-        "repeat": "",
-        "crontab": "00 03 * * *",
-        "once": false,
-        "onceDelay": "10",
-        "topic": "",
-        "x": 150,
-        "y": 860,
+        "g": "558c9f7eab2b08d8",
+        "name": "INSERT ALERT",
+        "func": "let severity;\nlet message;\n\nif(msg.payload < 2.3 || msg.payload > 4.2)\n{\n    severity = \"critical\";\n    message = \"Alarm! Die Spannung \" + msg.payload + \"V ist kritisch!\";\n}\nelse if((msg.payload >= 2.3 && msg.payload < 2.7) || (msg.payload > 3.9 && msg.payload <= 4.2))\n{\n    severity = \"warning\";\n    message = \"Die Spannung \" + msg.payload + \"V ist \" + (msg.payload < 2.7 ? \"zu gering\" : \"erhöht\") + \"!\";\n}\nelse\n{\n    return null;\n}\n\nmsg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (1, '${message}', '${severity}');`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 700,
         "wires": [
             [
-                "f6e5d4c3b2a1"
+                "2cebf81d17cebded"
             ]
         ]
     },
     {
-        "id": "f6e5d4c3b2a1",
-        "type": "sqlite",
+        "id": "2cebf81d17cebded",
+        "type": "delay",
         "z": "c938bfb2d64a222e",
-        "g": "528eae0a7c13d853",
-        "mydb": "sqlite_config",
-        "sqlquery": "fixed",
-        "sql": "DELETE FROM sensorData WHERE timestamp < datetime('now', '-24 hour');",
-        "name": "Daten löschen SensorData",
-        "x": 400,
-        "y": 860,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bd396f67859143ed",
-        "type": "inject",
-        "z": "c938bfb2d64a222e",
-        "g": "528eae0a7c13d853",
-        "name": "Wöchentlich löschen",
-        "props": [],
-        "repeat": "",
-        "crontab": "00 03 * * 1",
-        "once": false,
-        "onceDelay": "10",
-        "topic": "",
-        "x": 160,
-        "y": 920,
+        "g": "558c9f7eab2b08d8",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 700,
         "wires": [
             [
-                "f499713bfc3f4ab1"
+                "681ba5f0c5696751"
             ]
         ]
     },
     {
-        "id": "f499713bfc3f4ab1",
-        "type": "sqlite",
+        "id": "fd0e6d3a488b89d6",
+        "type": "delay",
         "z": "c938bfb2d64a222e",
-        "g": "528eae0a7c13d853",
-        "mydb": "sqlite_config",
-        "sqlquery": "fixed",
-        "sql": "DELETE FROM accessLog WHERE timestamp < datetime('now', '-168 hour');",
-        "name": "Daten löschen AccessLog",
-        "x": 390,
-        "y": 920,
+        "g": "558c9f7eab2b08d8",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 580,
         "wires": [
-            []
+            [
+                "681ba5f0c5696751"
+            ]
         ]
     },
     {
@@ -1412,7 +1489,7 @@
         "group": "41a9fbc91aec26f2",
         "name": "Ultrasonic",
         "order": 1,
-        "width": 6,
+        "width": 10,
         "height": 3,
         "format": "<h2 style=\"text-align: center;\">ULTRASONIC</h2>\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n    <div id=\"ultra\"\n        style=\"width:60px; height:60px; border-radius:50%; background-color:grey; box-shadow: 0 0 10px #999;\">\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        var color = \"grey\";\n        if (payload > 0.0 && payload <= 200.0) {\n            color = \"green\";\n        } else {\n            color = \"red\";\n        }\n        document.getElementById(\"ultra\").style.backgroundColor = color;\n    });\n})(scope);\n</script>",
         "storeOutMessages": true,
@@ -1482,9 +1559,7 @@
         "x": 350,
         "y": 60,
         "wires": [
-            [
-                "f5f807f9b751d4e8"
-            ]
+            []
         ]
     },
     {
@@ -1536,7 +1611,7 @@
         "type": "function",
         "z": "7403d64f0edf50af",
         "g": "3fbc6a3cb9bb4e80",
-        "name": "SQL UPDATE",
+        "name": "UPDATE device",
         "func": "let ip = msg.payload.ip;\nlet mac = msg.payload.mac;\n\nmsg.topic = `UPDATE device SET ip = '${ip}', mac = '${mac}' WHERE deviceName = 'esp-lager1';`;\nmsg.params = [ip, mac];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
@@ -1658,7 +1733,7 @@
         "type": "function",
         "z": "7403d64f0edf50af",
         "g": "d03dfc5fdbee8e9b",
-        "name": "Passender Abstand",
+        "name": "INSERT SensorData",
         "func": "let abstand = msg.payload;\n\nif(abstand > 0.0 && abstand <= 200.0)\n{\n    msg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (2, '1');`;\n    return msg;\n}\n\nreturn null;",
         "outputs": 1,
         "timeout": 0,
@@ -1666,27 +1741,188 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 310,
+        "x": 320,
         "y": 340,
         "wires": [
             [
-                "031fc8bac2c05212"
+                "6e3e63382bfd7e80"
             ]
         ]
     },
     {
-        "id": "031fc8bac2c05212",
+        "id": "d1e8703ee0337428",
+        "type": "mqtt in",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "ANALOG_TEMP",
+        "topic": "lager1/temp1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 520,
+        "wires": [
+            [
+                "3ed805342cb0eaac",
+                "ea5d3e511e0f6153",
+                "88038fb4aca15e16"
+            ]
+        ]
+    },
+    {
+        "id": "3ed805342cb0eaac",
+        "type": "subflow:caee75c53553d1b6",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "",
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "6c08e759481899ba"
+            ]
+        ]
+    },
+    {
+        "id": "6c08e759481899ba",
+        "type": "function",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "INSERT SensorData",
+        "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (5, ${value});`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "93630a5fd4808f73"
+            ]
+        ]
+    },
+    {
+        "id": "ea5d3e511e0f6153",
+        "type": "ui_gauge",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "Temperatur",
+        "group": "41a9fbc91aec26f2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatur",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "4",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 290,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "93630a5fd4808f73",
         "type": "sqlite",
         "z": "7403d64f0edf50af",
         "g": "d03dfc5fdbee8e9b",
         "mydb": "sqlite_config",
         "sqlquery": "msg.topic",
         "sql": "",
-        "name": "INSERT",
-        "x": 500,
+        "name": "Write Database",
+        "x": 780,
         "y": 340,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "88038fb4aca15e16",
+        "type": "function",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "INSERT ALERT",
+        "func": "let severity;\nlet message;\n\nif(msg.payload < -5.0 || msg.payload > 40.0)\n{\n    severity = \"critical\";\n    message = \"Alarm! Die Temperatur \" + msg.payload + \"°C ist kritisch!\";\n}\nelse if((msg.payload >= -5.0 && msg.payload < 5.0) || (msg.payload > 30.0 && msg.payload <= 40.0))\n{\n    severity = \"warning\";\n    message = \"Die Temperatur \" + msg.payload + \"°C ist \" + (msg.payload < 5.0 ? \"zu gering\" : \"erhöht\") + \"!\";\n}\nelse\n{\n    return null;\n}\n\nmsg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (5, '${message}', '${severity}');`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "cd81e7171d2277eb"
+            ]
+        ]
+    },
+    {
+        "id": "6e3e63382bfd7e80",
+        "type": "delay",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "93630a5fd4808f73"
+            ]
+        ]
+    },
+    {
+        "id": "cd81e7171d2277eb",
+        "type": "delay",
+        "z": "7403d64f0edf50af",
+        "g": "d03dfc5fdbee8e9b",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "93630a5fd4808f73"
+            ]
         ]
     },
     {
@@ -1745,8 +1981,597 @@
         "x": 350,
         "y": 60,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b489204d1102fee6",
+        "type": "mqtt in",
+        "z": "88257daac3ab0f44",
+        "g": "8c66ca0ebcc0bd43",
+        "name": "IP",
+        "topic": "esp/lager2/ip",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 160,
+        "wires": [
             [
-                "57cf22c66a593e1f"
+                "8c1c5bd1f3aed1db"
+            ]
+        ]
+    },
+    {
+        "id": "17c97ef166121ebc",
+        "type": "mqtt in",
+        "z": "88257daac3ab0f44",
+        "g": "8c66ca0ebcc0bd43",
+        "name": "MAC",
+        "topic": "esp/lager2/mac",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "e5353fece82a2046"
+            ]
+        ]
+    },
+    {
+        "id": "52b4931c852d9220",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "8c66ca0ebcc0bd43",
+        "name": "UPDATE device",
+        "func": "let ip = msg.payload.ip;\nlet mac = msg.payload.mac;\n\nmsg.topic = `UPDATE device SET ip = '${ip}', mac = '${mac}' WHERE deviceName = 'esp-lager2';`;\nmsg.params = [ip, mac];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "d5681310ac6ada9d"
+            ]
+        ]
+    },
+    {
+        "id": "d5681310ac6ada9d",
+        "type": "sqlite",
+        "z": "88257daac3ab0f44",
+        "g": "8c66ca0ebcc0bd43",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Update Database",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ab357814690ffb4",
+        "type": "join",
+        "z": "88257daac3ab0f44",
+        "g": "8c66ca0ebcc0bd43",
+        "name": "Verbinde",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "52b4931c852d9220"
+            ]
+        ]
+    },
+    {
+        "id": "8c1c5bd1f3aed1db",
+        "type": "change",
+        "z": "88257daac3ab0f44",
+        "g": "8c66ca0ebcc0bd43",
+        "name": "IP Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ip",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "7ab357814690ffb4"
+            ]
+        ]
+    },
+    {
+        "id": "e5353fece82a2046",
+        "type": "change",
+        "z": "88257daac3ab0f44",
+        "g": "8c66ca0ebcc0bd43",
+        "name": "MAC Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "mac",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "7ab357814690ffb4"
+            ]
+        ]
+    },
+    {
+        "id": "7d5891b5db87413f",
+        "type": "mqtt in",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "DS18S20-Temp",
+        "topic": "lager2/temp2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "231ac990d004dd3c",
+                "6a2ee39b846f85ee",
+                "e52c673fdccec4c0"
+            ]
+        ]
+    },
+    {
+        "id": "f4da0e85ac8031ce",
+        "type": "mqtt in",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "Flammensensor",
+        "topic": "lager2/flame",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 540,
+        "wires": [
+            [
+                "9bf5bf80b817a8df",
+                "ad7925b693b45aac",
+                "21265b7402ae6e1f"
+            ]
+        ]
+    },
+    {
+        "id": "1556e0557d3875b2",
+        "type": "mqtt in",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "Gassensor",
+        "topic": "lager2/gas",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 680,
+        "wires": [
+            [
+                "bb0b0301928cf70b",
+                "2d2f605d1a26d8c0",
+                "73bff636b6c6ae1e"
+            ]
+        ]
+    },
+    {
+        "id": "9bf5bf80b817a8df",
+        "type": "ui_template",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "group": "c19e42e73336857f",
+        "name": "Flame",
+        "order": 1,
+        "width": 20,
+        "height": 3,
+        "format": "<h2 style=\"text-align: center;\">FLAMMEN</h2>\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n    <div id=\"flame\"\n        style=\"width:60px; height:60px; border-radius:50%; background-color:grey; box-shadow: 0 0 10px #999;\">\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        var color = \"grey\";\n        if (payload == 1) {\n            color = \"green\";\n        } else {\n            color = \"red\";\n        }\n        document.getElementById(\"flame\").style.backgroundColor = color;\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 330,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "231ac990d004dd3c",
+        "type": "ui_gauge",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "Temperatur",
+        "group": "c19e42e73336857f",
+        "order": 2,
+        "width": 10,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperatur",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "4",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 330,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "bb0b0301928cf70b",
+        "type": "ui_gauge",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "Gas",
+        "group": "c19e42e73336857f",
+        "order": 3,
+        "width": 10,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Rauch-/ Gasmelder",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "33",
+        "seg2": "66",
+        "diff": false,
+        "className": "",
+        "x": 330,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6a2ee39b846f85ee",
+        "type": "subflow:caee75c53553d1b6",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "9d2f8a73db15da1d"
+            ]
+        ]
+    },
+    {
+        "id": "9d2f8a73db15da1d",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "INSERT SensorData",
+        "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (6, ${value});`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 340,
+        "wires": [
+            [
+                "1cee5e4fc9938ea1"
+            ]
+        ]
+    },
+    {
+        "id": "1cee5e4fc9938ea1",
+        "type": "sqlite",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Write Database",
+        "x": 920,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ad7925b693b45aac",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "INSERT SensorData",
+        "func": "if(!msg.payload)\n{\n    msg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (7, '1');`;\n    return msg;\n}\nelse\n{\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 540,
+        "wires": [
+            [
+                "ed711fb35d6d5902"
+            ]
+        ]
+    },
+    {
+        "id": "21265b7402ae6e1f",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "INSERT ALERT",
+        "func": "if(!msg.payload)\n{\n    msg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (7, 'Alarm! Flammen erkannt!', 'critical');`;\n    return msg;\n}\nelse\n{\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 500,
+        "wires": [
+            [
+                "c1a64e780dc2f7b3"
+            ]
+        ]
+    },
+    {
+        "id": "2d2f605d1a26d8c0",
+        "type": "subflow:caee75c53553d1b6",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "",
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "a7c15631bd1f8056"
+            ]
+        ]
+    },
+    {
+        "id": "a7c15631bd1f8056",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "INSERT SensorData",
+        "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (8, ${value});`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 680,
+        "wires": [
+            [
+                "1cee5e4fc9938ea1"
+            ]
+        ]
+    },
+    {
+        "id": "73bff636b6c6ae1e",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "INSERT ALERT",
+        "func": "let severity;\nlet message;\n\nif(msg.payload <= 30.0)\n{\n    return null;\n}\nelse if(msg.payload > 30.0)\n{\n    severity = \"warning\";\n    message = \"Der Gas oder Rauchstand im Lager 2 ist zu hoch! Bitte prüfen!\";\n}\nelse if(msg.payload > 60.0)\n{\n    severity = \"critical\";\n    message = \"Alarm! Der Gas oder Rauchstand ist gefährlich!\";\n}\n\nmsg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (8, '${message}', '${severity}');`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 640,
+        "wires": [
+            [
+                "aa1f47f5b7d0c608"
+            ]
+        ]
+    },
+    {
+        "id": "e52c673fdccec4c0",
+        "type": "function",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "INSERT ALERT",
+        "func": "let severity;\nlet message;\n\nif(msg.payload < -5.0 || msg.payload > 40.0)\n{\n    severity = \"critical\";\n    message = \"Alarm! Die Temperatur \" + msg.payload + \"°C ist kritisch!\";\n}\nelse if((msg.payload >= -5.0 && msg.payload < 5.0) || (msg.payload > 30.0 && msg.payload <= 40.0))\n{\n    severity = \"warning\";\n    message = \"Die Temperatur \" + msg.payload + \"°C ist \" + (msg.payload < 5.0 ? \"zu gering\" : \"erhöht\") + \"!\";\n}\nelse\n{\n    return null;\n}\n\nmsg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (6, '${message}', '${severity}');`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 380,
+        "wires": [
+            [
+                "08c6667a825038e2"
+            ]
+        ]
+    },
+    {
+        "id": "08c6667a825038e2",
+        "type": "delay",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 380,
+        "wires": [
+            [
+                "1cee5e4fc9938ea1"
+            ]
+        ]
+    },
+    {
+        "id": "c1a64e780dc2f7b3",
+        "type": "delay",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "1cee5e4fc9938ea1"
+            ]
+        ]
+    },
+    {
+        "id": "ed711fb35d6d5902",
+        "type": "delay",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 540,
+        "wires": [
+            [
+                "1cee5e4fc9938ea1"
+            ]
+        ]
+    },
+    {
+        "id": "aa1f47f5b7d0c608",
+        "type": "delay",
+        "z": "88257daac3ab0f44",
+        "g": "c0b2a133b4df810d",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 590,
+        "y": 640,
+        "wires": [
+            [
+                "1cee5e4fc9938ea1"
             ]
         ]
     },
@@ -1806,9 +2631,757 @@
         "x": 350,
         "y": 60,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a6a17665ba13e0c",
+        "type": "mqtt in",
+        "z": "2da02b444bea3b70",
+        "g": "dd90a3228a29b9dd",
+        "name": "IP",
+        "topic": "esp/lager3/ip",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 160,
+        "wires": [
             [
-                "663b474054f0b764"
+                "c8d6b07364ddbce0"
             ]
+        ]
+    },
+    {
+        "id": "d714a98c70cbdeea",
+        "type": "mqtt in",
+        "z": "2da02b444bea3b70",
+        "g": "dd90a3228a29b9dd",
+        "name": "MAC",
+        "topic": "esp/lager3/mac",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 240,
+        "wires": [
+            [
+                "c318206e193f5513"
+            ]
+        ]
+    },
+    {
+        "id": "0354422341ee6775",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "dd90a3228a29b9dd",
+        "name": "UPDATE device",
+        "func": "let ip = msg.payload.ip;\nlet mac = msg.payload.mac;\n\nmsg.topic = `UPDATE device SET ip = '${ip}', mac = '${mac}' WHERE deviceName = 'esp-lager3';`;\nmsg.params = [ip, mac];\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 200,
+        "wires": [
+            [
+                "af6ab78457ce6704"
+            ]
+        ]
+    },
+    {
+        "id": "af6ab78457ce6704",
+        "type": "sqlite",
+        "z": "2da02b444bea3b70",
+        "g": "dd90a3228a29b9dd",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Update Database",
+        "x": 770,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6a90ae88eb6ad31",
+        "type": "join",
+        "z": "2da02b444bea3b70",
+        "g": "dd90a3228a29b9dd",
+        "name": "Verbinde",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": true,
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "0354422341ee6775"
+            ]
+        ]
+    },
+    {
+        "id": "c8d6b07364ddbce0",
+        "type": "change",
+        "z": "2da02b444bea3b70",
+        "g": "dd90a3228a29b9dd",
+        "name": "IP Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "ip",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 160,
+        "wires": [
+            [
+                "f6a90ae88eb6ad31"
+            ]
+        ]
+    },
+    {
+        "id": "c318206e193f5513",
+        "type": "change",
+        "z": "2da02b444bea3b70",
+        "g": "dd90a3228a29b9dd",
+        "name": "MAC Topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "mac",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "f6a90ae88eb6ad31"
+            ]
+        ]
+    },
+    {
+        "id": "a43ba62238e44975",
+        "type": "mqtt in",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "PIR",
+        "topic": "lager3/pir",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "b3bc09518630ae68",
+                "3c636732a6214acf"
+            ]
+        ]
+    },
+    {
+        "id": "b3bc09518630ae68",
+        "type": "ui_template",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "group": "56f6f698198454b4",
+        "name": "PIR",
+        "order": 1,
+        "width": 20,
+        "height": 3,
+        "format": "<h2 style=\"text-align: center;\">PIR</h2>\n<div style=\"display: flex; justify-content: center; align-items: center;\">\n    <div id=\"pir\"\n        style=\"width:60px; height:60px; border-radius:50%; background-color:grey; box-shadow: 0 0 10px #999;\">\n    </div>\n</div>\n\n<script>\n    (function(scope) {\n    scope.$watch('msg.payload', function(payload) {\n        var color = \"grey\";\n        if (payload == 1) {\n            color = \"green\";\n        } else {\n            color = \"red\";\n        }\n        document.getElementById(\"pir\").style.backgroundColor = color;\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 270,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c636732a6214acf",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "INSERT SensorData",
+        "func": "if(msg.payload)\n{\n    msg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (9, '1');`;\n    return msg;\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 340,
+        "wires": [
+            [
+                "22fee5486c486419"
+            ]
+        ]
+    },
+    {
+        "id": "32c2f1f43857d523",
+        "type": "mqtt in",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "VAPOR",
+        "topic": "lager3/vapor",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 520,
+        "wires": [
+            [
+                "2caf2fa02779e81f",
+                "3954e81368a6906a",
+                "d6706e7bef741531"
+            ]
+        ]
+    },
+    {
+        "id": "2caf2fa02779e81f",
+        "type": "subflow:caee75c53553d1b6",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "",
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "786b46fdf956a2a5"
+            ]
+        ]
+    },
+    {
+        "id": "786b46fdf956a2a5",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "INSERT SensorData",
+        "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (10, ${value});`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 520,
+        "wires": [
+            [
+                "3995cdf1e3b80adb"
+            ]
+        ]
+    },
+    {
+        "id": "3954e81368a6906a",
+        "type": "ui_gauge",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "Dampf",
+        "group": "56f6f698198454b4",
+        "order": 2,
+        "width": 10,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Dampf",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "33",
+        "seg2": "66",
+        "diff": false,
+        "className": "",
+        "x": 270,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3995cdf1e3b80adb",
+        "type": "sqlite",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "mydb": "sqlite_config",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "Write Database",
+        "x": 1120,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6706e7bef741531",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "INSERT ALERT",
+        "func": "let severity;\nlet message;\n\nif(msg.payload > 60.0)\n{\n    severity = \"critical\";\n    message = \"Alarm! Der Dampfanteil ist kritisch!\";\n}\nelse if(msg.payload > 30.0)\n{\n    severity = \"warning\";\n    message = \"Der Dampfanteil ist erhöht!\";\n}\nelse\n{\n    return null;\n}\n\nmsg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (10, '${message}', '${severity}');`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 460,
+        "wires": [
+            [
+                "91d49ebf5b2ba9f2"
+            ]
+        ]
+    },
+    {
+        "id": "22fee5486c486419",
+        "type": "delay",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 340,
+        "wires": [
+            [
+                "3995cdf1e3b80adb"
+            ]
+        ]
+    },
+    {
+        "id": "91d49ebf5b2ba9f2",
+        "type": "delay",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 510,
+        "y": 460,
+        "wires": [
+            [
+                "3995cdf1e3b80adb"
+            ]
+        ]
+    },
+    {
+        "id": "1743a0c1807d2a7e",
+        "type": "mqtt in",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "TEMP_HUMIDITY",
+        "topic": "lager3/temp_humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2809b599cc4c1905",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 700,
+        "wires": [
+            [
+                "ea155c3259b62f7e"
+            ]
+        ]
+    },
+    {
+        "id": "8d8737171fb20117",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "INSERT ALERT",
+        "func": "let severity;\nlet message;\n\nif(msg.payload < -5.0 || msg.payload > 40.0)\n{\n    severity = \"critical\";\n    message = \"Alarm! Die Temperatur \" + msg.payload + \"°C ist kritisch!\";\n}\nelse if((msg.payload >= -5.0 && msg.payload < 5.0) || (msg.payload > 30.0 && msg.payload <= 40.0))\n{\n    severity = \"warning\";\n    message = \"Die Temperatur \" + msg.payload + \"°C ist \" + (msg.payload < 5.0 ? \"zu gering\" : \"erhöht\") + \"!\";\n}\nelse\n{\n    return null;\n}\n\nmsg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (12, '${message}', '${severity}');`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 780,
+        "wires": [
+            [
+                "291d292a2d2997fa"
+            ]
+        ]
+    },
+    {
+        "id": "6a294c716814657f",
+        "type": "subflow:caee75c53553d1b6",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "",
+        "x": 610,
+        "y": 840,
+        "wires": [
+            [
+                "9b6a68897cce4308"
+            ]
+        ]
+    },
+    {
+        "id": "d09b172b65bec1c7",
+        "type": "ui_gauge",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "Temperatur",
+        "group": "56f6f698198454b4",
+        "order": 3,
+        "width": 10,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Temperatur",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": "-10",
+        "max": "50",
+        "colors": [
+            "#ca3838",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "4",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "9b6a68897cce4308",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "INSERT SensorData",
+        "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (12, ${value});`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 840,
+        "wires": [
+            [
+                "3995cdf1e3b80adb"
+            ]
+        ]
+    },
+    {
+        "id": "291d292a2d2997fa",
+        "type": "delay",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 780,
+        "wires": [
+            [
+                "3995cdf1e3b80adb"
+            ]
+        ]
+    },
+    {
+        "id": "ea155c3259b62f7e",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "Split Message",
+        "func": "let parts = msg.payload.split(',');\n\nlet humidity = {payload: parseFloat(parts[0])};\nlet temperature = {payload: parseFloat(parts[1])};\n\nreturn [humidity, temperature];",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 700,
+        "wires": [
+            [
+                "eff7088a1567164b",
+                "87c3955540487aae",
+                "02688872ad03fd76"
+            ],
+            [
+                "d09b172b65bec1c7",
+                "6a294c716814657f",
+                "8d8737171fb20117"
+            ]
+        ]
+    },
+    {
+        "id": "02688872ad03fd76",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "INSERT ALERT",
+        "func": "let severity;\nlet message;\n\nif(msg.payload < 30.0)\n{\n    severity = \"warning\";\n    message = \"Die Luftfeuchtigkeit ist zu gering!\";\n}\nelse if(msg.payload > 60.0)\n{\n    severity = \"critical\";\n    message = \"Alarm! Die Luftfeuchtigkeit ist zu hoch!\";\n}\nelse\n{\n    return null;\n}\n\nmsg.topic = `INSERT INTO alert (sensor_id, message, severity) VALUES (11, '${message}', '${severity}');`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 600,
+        "wires": [
+            [
+                "0922e19614512de7"
+            ]
+        ]
+    },
+    {
+        "id": "87c3955540487aae",
+        "type": "subflow:caee75c53553d1b6",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "",
+        "x": 610,
+        "y": 660,
+        "wires": [
+            [
+                "6b6e54f07240d883"
+            ]
+        ]
+    },
+    {
+        "id": "eff7088a1567164b",
+        "type": "ui_gauge",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "Luftfeuchtigkeit",
+        "group": "56f6f698198454b4",
+        "order": 4,
+        "width": 20,
+        "height": 6,
+        "gtype": "gage",
+        "title": "Luftfeuchtigkeit",
+        "label": "%",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#e6e600",
+            "#00b500",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "60",
+        "diff": false,
+        "className": "",
+        "x": 540,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "6b6e54f07240d883",
+        "type": "function",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "INSERT SensorData",
+        "func": "let value = msg.payload;\n\nmsg.topic = `INSERT INTO sensorData (sensor_id, value) VALUES (11, ${value});`;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 660,
+        "wires": [
+            [
+                "3995cdf1e3b80adb"
+            ]
+        ]
+    },
+    {
+        "id": "0922e19614512de7",
+        "type": "delay",
+        "z": "2da02b444bea3b70",
+        "g": "e6290a6a6c23946a",
+        "name": "1 Min. Delay",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 600,
+        "wires": [
+            [
+                "3995cdf1e3b80adb"
+            ]
+        ]
+    },
+    {
+        "id": "a1b2c3d4e5f6",
+        "type": "inject",
+        "z": "332a407294182bfa",
+        "g": "528eae0a7c13d853",
+        "name": "Täglich löschen",
+        "props": [],
+        "repeat": "",
+        "crontab": "00 03 * * *",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "f6e5d4c3b2a1"
+            ]
+        ]
+    },
+    {
+        "id": "f6e5d4c3b2a1",
+        "type": "sqlite",
+        "z": "332a407294182bfa",
+        "g": "528eae0a7c13d853",
+        "mydb": "sqlite_config",
+        "sqlquery": "fixed",
+        "sql": "DELETE FROM sensorData WHERE timestamp < datetime('now', '-24 hour');",
+        "name": "Daten löschen SensorData",
+        "x": 400,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd396f67859143ed",
+        "type": "inject",
+        "z": "332a407294182bfa",
+        "g": "528eae0a7c13d853",
+        "name": "Wöchentlich löschen",
+        "props": [],
+        "repeat": "",
+        "crontab": "00 03 * * 1",
+        "once": false,
+        "onceDelay": "10",
+        "topic": "",
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "f499713bfc3f4ab1"
+            ]
+        ]
+    },
+    {
+        "id": "f499713bfc3f4ab1",
+        "type": "sqlite",
+        "z": "332a407294182bfa",
+        "g": "528eae0a7c13d853",
+        "mydb": "sqlite_config",
+        "sqlquery": "fixed",
+        "sql": "DELETE FROM accessLog WHERE timestamp < datetime('now', '-168 hour');",
+        "name": "Daten löschen AccessLog",
+        "x": 390,
+        "y": 120,
+        "wires": [
+            []
         ]
     }
 ]

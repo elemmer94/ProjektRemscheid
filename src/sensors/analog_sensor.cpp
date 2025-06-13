@@ -13,7 +13,7 @@ void AnalogSensor::begin()
 void AnalogSensor::loop()
 {
     double sensorValue = analogRead(_inPin);
-    sensorValue = (sensorValue * 100.0) / 890.0;
+    sensorValue = (sensorValue * 100.0) / 1023.0;
 
     publishMessage(_publishTopic, String(sensorValue).c_str());
 }

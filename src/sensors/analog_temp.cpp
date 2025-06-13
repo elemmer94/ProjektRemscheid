@@ -12,10 +12,14 @@ void AnalogTemp::begin()
 
 void AnalogTemp::loop()
 {
-    double sensorValue = analogRead(_inPin);
-    double fenya = (sensorValue / 1023) * 5;
-    double r = (5 - fenya) / fenya * 4700;
-    sensorValue = 1 / (log(r / 10000) / 3950 + 1 / (25 + 273.15)) - 273.15 + 4.0;
+    double raw = analogRead(_inPin);
+    double v_out = (raw / 1023.0) * 3.3;     // Spannung an A0, max 3.3V
+    // Spannungsteiler rückrechnen (R1 = 2.2k, R2 = 4.3k)
+    double v_sensor = v_out * (2.2 + 4.3) / 4.3;
+    // Berechnung des NTC-Widerstands (R2 = 4.7k Pullup)
+    double r_ntc = (5.0 - v_sensor) / v_sensor * 4700.0;
+    // Thermistor-Formel (B-Wert-Methode) + Offset Korrektur
+    double temperatureC = 1.0 / (log(r_ntc / 10000.0) / 3950.0 + 1.0 / (25 + 273.15)) - 273.15 + 6;
 
-    publishMessage(_publishTopic, String(sensorValue).c_str());
+    publishMessage(_publishTopic, String(temperatureC).c_str());
 }

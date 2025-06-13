@@ -14,9 +14,7 @@ void Voltage::loop()
 {
     double sensorValue = analogRead(_inPin);
     // Umrechnung in eine Spannung
-    sensorValue = (sensorValue / 1024) * 3.2;
-    // Berechnung der Eingangsspannung
-    sensorValue = sensorValue * ((12.0 + 30.0) / 12.0); // R2 + R1 / R2
+    sensorValue = (sensorValue / 970.0) * 3.28;
 
     publishMessage(_publishTopic, String(sensorValue).c_str());
 }
