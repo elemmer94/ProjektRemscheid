@@ -10,6 +10,8 @@
 
 // IP RASPI
 #define RASPI_IP "192.168.0.100"
+#define MQTT_USER "NodeRed-User"
+#define MQTT_PASS "Passwort"
 
 // ESP Daten
 // #define ESP_NAME "ESP_1"

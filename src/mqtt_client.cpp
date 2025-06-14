@@ -75,7 +75,7 @@ void reconnectMQTT()
 
     myTimer = millis(); // neuen Versuch merken
 
-    if (client.connect(ESP_NAME, nullptr, nullptr, ESP_LASTWILL, 1, true, "false"))
+    if (client.connect(ESP_NAME, MQTT_USER, MQTT_PASS, ESP_LASTWILL, 1, true, "false"))
     {
         Serial.println("🟢 MQTT verbunden.");
         // Alle Topics neu abonnieren
