@@ -1,0 +1,115 @@
+<h2 style="text-align: center;">Belüftung</h2>
+
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <label class="switch">
+        <input type="checkbox" id="ventilation-switch3">
+        <span class="slider"></span>
+    </label>
+    <span id="ventilation-label3" style="margin-top: 5px; font-weight: bold; color: grey;">
+        Belüftung ausgeschaltet
+    </span>
+</div>
+
+<style>
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        background-color: #ccc;
+        border-radius: 34px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: 0.4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 22px;
+        width: 22px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+    input:checked+.slider {
+        background-color: #2196F3;
+    }
+
+    input:checked+.slider:before {
+        transform: translateX(22px);
+    }
+</style>
+
+<script>
+    (function(scope) {
+    const switchElement = document.getElementById("ventilation-switch3");
+    const label = document.getElementById("ventilation-label3");
+
+    let currentTemp = null;
+    let currentVapor = null;
+	let currentHumi = null;
+
+    function updateUI(state) {
+        switchElement.checked = state;
+        label.textContent = state ? "Belüftung eingeschaltet" : "Belüftung ausgeschaltet";
+        label.style.color = state ? "blue" : "grey";
+    }
+
+    function checkConditions() {
+
+        if (currentTemp > 27 || currentVapor > 50 || currentHumi > 75) {
+            updateUI(true);
+        } else if (currentTemp < 25 && currentVapor < 45 && currentHumi < 65) {
+            updateUI(false);
+        }
+    }
+
+    scope.$watch('msg.payload.temp' , function(payload) {
+        if(payload !== undefined) execute("temp", payload);
+        else execute("temp", 0);
+    });
+
+    scope.$watch('msg.payload.vapor' , function(payload) {
+        if(payload !== undefined) execute("vapor", payload);
+        else execute("vapor", 0);
+    });
+
+    scope.$watch('msg.payload.humi' , function(payload) {
+        if(payload !== undefined) execute("humi", payload);
+        else execute("humi", 0);
+    });
+
+    function execute(sensor, payload){
+        if (sensor === "temp" && payload !== undefined) {
+            currentTemp = payload;
+        } else if (sensor === "vapor" && payload !== undefined) {
+            currentVapor = payload;
+        } else if (sensor === "humi" && payload !== undefined) {
+			currentHumi = payload;
+		}
+        checkConditions();
+    }
+
+    switchElement.addEventListener('change', function() {
+        const state = switchElement.checked;
+        updateUI(state);
+    });
+})(scope);
+</script>
